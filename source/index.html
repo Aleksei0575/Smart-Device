@@ -16,7 +16,7 @@
     <meta name="description" content="Smart Device - производство печатных плат и комплектующих, их поставка и монтаж">
   </head>
   <body>
-    <div style="display: none">
+    <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header">
@@ -25,50 +25,51 @@
           <svg class="page-header__icon-logo" x="0px" y="0px" width="52px" height="52px">
             <use xlink:href="#icon-logo"/>
           </svg>
-          <span>Smart Device</span>
-          <span>умные технологии</span>
+          <p class="page-header__logo-text"><span>Smart Device</span> умные технологии</p>
         </a>
-        <nav class="page-hesder__nav">
+        <nav class="page-header__nav">
           <button class="page-header__button-menu">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </nav>
         <div class="page-header__contacts">
           <a class="page-header__email" href="mailto:info@sd.ru">
-            <svg class="page-header__icon-logo" x="0px" y="0px" width="19px" height="14px">
+            <svg class="page-header__icon-email" x="0px" y="0px" width="19px" height="14px">
               <use xlink:href="#icon-email"/>
             </svg>
             <span>info@sd.ru</span>
           </a>
           <a class="page-header__phone" href="tel:+74950005252">
-            <svg class="page-header__icon-logo" x="0px" y="0px" width="18px" height="18px">
+            <svg class="page-header__icon-phone" x="0px" y="0px" width="18px" height="18px">
               <use xlink:href="#icon-phone"/>
             </svg>
             <span>+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
           </a>
         </div>
-        <a class="page-heade__button button" href="#">Заказать звонок</a>
+        <a class="page-header__button button" href="#">Заказать звонок</a>
       </div>
     </header>
     <main class="main-content">
       <!-- Промо блок -->
       <section class="promo">
-        <h1 class="visually-hidden">SmartDevice - производство печатных плат и монтаж</h1>
-        <div class="promo__description">
-          <h2 class="promo__title">Печатные платы</h2>
-          <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="promo__button">
-            <span>Получить бесплатную консультацию</span>
-            <span>Бесплатная консультация</span>
-          </a>
+        <div class="promo__wrapper container">
+          <h1 class="visually-hidden">SmartDevice - производство печатных плат и монтаж</h1>
+          <div class="promo__description">
+            <h2 class="promo__title">Печатные платы</h2>
+            <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a class="promo__button">
+              <span>Получить бесплатную консультацию</span>
+              <span>Бесплатная консультация</span>
+            </a>
+          </div>
+          <div class="promo__image">
+            <picture>
+              <source type="image/webp" srcset="img/promo-image-desktop@1x.webp 1x, img/promo-image-desktop@2x.webp 2x">
+              <img src="img/promo-image-desktop@1x.png" srcset="img/promo-image-desktop@2x.png 2x" width="705" height="515" alt="Изображение печатных плат">
+            </picture>
+          </div>
+          <a class="promo__anchor" href="#advantages">Скролл вниз</a>
         </div>
-        <div class="promo__image">
-          <picture>
-            <source type="image/webp" srcset="img/promo-image-desktop@1x.webp 1x, img/promo-image-desktop@2x.webp 2x">
-            <img src="img/promo-image-desktop@1x.png" srcset="img/promo-image-desktop@2x.png 2x" width="705" height="515" alt="Изображение печатных плат">
-          </picture>
-        </div>
-        <a class="promo__anchor" href="#advantages">Скролл вниз</a>
       </section>
 
       <!-- Блок преимуществ -->
@@ -248,8 +249,8 @@
     <!-- Футер -->
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <a class="page-header__logo logo" href="#" aria-label="Логотип SmartDevice">
-          <svg class="page-header__icon-logo" x="0px" y="0px" width="52px" height="52px">
+        <a class="page-footer__logo logo" href="#" aria-label="Логотип SmartDevice">
+          <svg class="page-footer__icon-logo" x="0px" y="0px" width="52px" height="52px">
             <use xlink:href="#icon-logo"/>
           </svg>
           <span>Smart Device</span>
