@@ -1,3 +1,7 @@
+.about-us {
+  margin-bottom: 82px;
+}
+
 .about-us__container {
   max-width: 1171px;
   margin: 0 auto;
@@ -64,4 +68,14 @@
   border-radius: 5px;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+    border: none;
+  }
+
+  &:active {
+    background-color: #2100f5;
+  }
 }

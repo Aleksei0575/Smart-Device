@@ -103,4 +103,14 @@
   border-radius: 5px;
 
   cursor: pointer;
+
+  &:hover {
+    color: $blue;
+    border: 1px solid $blue;
+  }
+
+  &:active {
+    color: $gray;
+    border: 1px solid $gray;
+  }
 }
