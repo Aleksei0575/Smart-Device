@@ -1,5 +1,6 @@
 .promo {
   margin-top: -113px;
+  margin-bottom: 110px;
   overflow: hidden;
   color: $white;
   background-color: #1b2d37;
@@ -8,6 +9,10 @@
   background-position: center bottom;
   background-size: cover;
   min-height: 878px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-image-desktop@2x.png");
+  }
 }
 
 .promo__wrapper {
@@ -42,16 +47,13 @@
   position: relative;
 
   &::before {
-    content: "";
-    position: absolute;
+    @include pseudo-elem;
     top: 16px;
     left: 22px;
     background-image: url("../img/line-decoration.png");
-    background-size: 66px 2px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    width: 66px;
-    height: 2px;
+    @include size(66, 2);
   }
 }
 
@@ -74,7 +76,6 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
-    //border: 1px solid #ffffff;
     background-color: #00b2ff;
     border-radius: 5px;
 
@@ -101,14 +102,53 @@
   height: 515px;
   padding-top: 107px;
   right: -55px;
+
+  img {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    @include pseudo-elem;
+    top: 125px;
+    left: 64px;
+    background-image: url("../img/bg-image-poligon.png");
+    background-size: 552px 478px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    @include size(552, 478);
+    z-index: 1;
+  }
+
+  &::after {
+    @include pseudo-elem;
+    bottom: 19px;
+    left: 13px;
+    background-image: url("../img/bg-image-poligon.png");
+    background-size: 325px 280px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    @include size(325, 280);
+    z-index: 1;
+  }
 }
 
 .promo__anchor {
-  position: absolute;
+  @include pseudo-elem;
   bottom: 22px;
   left: 9px;
   transform: rotate(-90deg);
   @include font(14, 16);
   color: #ffffff;
   opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 0.35;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }

@@ -1,0 +1,207 @@
+.advantages {
+  margin-bottom: 77px;
+}
+
+.advantages__container {
+  max-width: 1171px;
+  margin: 0 auto;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+  position: relative;
+
+  &::before {
+    @include pseudo-elem;
+    top: -66px;
+    left: -146px;
+    background-image: url("../img/bg-image-advantages.png");
+    background-size: 336px 324px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    @include size(336, 324);
+    z-index: -1;
+  }
+
+  &::after {
+    @include pseudo-elem;
+    top: 35px;
+    left: 208px;
+    background-image: url("../img/bg-advantages-poligon.png");
+    background-size: 872px 873px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    @include size(872, 873);
+    z-index: -1;
+  }
+}
+
+.advantages__list {
+  @include reset-ul;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  width: 50%;
+  margin-bottom: 28px;
+}
+
+.advantages__link {
+  display: block;
+  position: relative;
+
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-left: 3px solid $blue;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+
+    h3,
+    p {
+      color: $white;
+    }
+  }
+}
+
+.advantages__item-term {
+  &:hover .advantages__link-term {
+    fill: #46c1ae;
+  }
+}
+
+.advantages__link-term {
+  width: 471px;
+
+  padding-left: 43px;
+  padding-right: 53px;
+  padding-top: 96px;
+  padding-bottom: 65px;
+
+  h3 {
+    margin: 0;
+    padding-bottom: 15px;
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: 400;
+    @include font(24, 34);
+    color: $blue;
+  }
+
+  p {
+    margin: 0;
+    color: $gray;
+  }
+}
+
+.advantages__icon-term {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+}
+
+
+.advantages__link-delivery {
+  width: 480px;
+  margin-left: 14px;
+  padding-left: 43px;
+  padding-right: 45px;
+  padding-top: 96px;
+  padding-bottom: 65px;
+
+  h3 {
+    margin: 0;
+    padding-bottom: 15px;
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: 400;
+    @include font(24, 34);
+    color: $blue;
+  }
+
+  p {
+    margin: 0;
+    color: $gray;
+  }
+}
+
+.advantages__icon-delivery {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+}
+
+.advantages__link-confidentiality {
+  width: 405px;
+  padding-left: 43px;
+  padding-right: 117px;
+  padding-top: 97px;
+  padding-bottom: 110px;
+
+  h3 {
+    margin: 0;
+    padding-bottom: 15px;
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: 400;
+    @include font(24, 34);
+    color: $blue;
+  }
+
+  p {
+    margin: 0;
+    color: $gray;
+  }
+}
+
+.advantages__icon-confidentiality {
+  position: absolute;
+  top: 45px;
+  left: 42px;
+}
+
+.advantages__link-cost {
+  width: 480px;
+  margin-left: 14px;
+  padding-left: 43px;
+  padding-right: 45px;
+  padding-top: 96px;
+  padding-bottom: 88px;
+  position: relative;
+
+  &::after {
+    @include pseudo-elem;
+    top: -46px;
+    left: 578px;
+    background-image: url("../img/bg-image-advantages.png");
+    background-size: 336px 324px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    @include size(336, 324);
+    z-index: 20;
+    transform: rotate(-180deg);
+  }
+
+  h3 {
+    margin: 0;
+    padding-bottom: 15px;
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: 400;
+    @include font(24, 34);
+    color: $blue;
+  }
+
+  p {
+    margin: 0;
+    color: $gray;
+  }
+}
+
+.advantages__icon-cost {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+}

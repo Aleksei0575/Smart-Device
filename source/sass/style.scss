@@ -4,6 +4,8 @@
 @import "fonts.scss";
 @import "global.scss";
 
-@import "container.scss";
-@import "page-header.scss";
-@import "promo.scss";
+@import "container/container.scss";
+@import "page-header/page-header.scss";
+@import "promo/promo.scss";
+@import "advantages/advantages.scss";
+@import "about-us/about-us.scss";

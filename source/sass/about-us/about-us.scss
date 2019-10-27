@@ -1,0 +1,67 @@
+.about-us__container {
+  max-width: 1171px;
+  margin: 0 auto;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  h2 {
+    @include reset;
+    padding-bottom: 21px;
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: 400;
+    @include font(36, 51);
+    color: $gray;
+  }
+
+  p {
+    @include reset;
+  }
+
+  p:nth-child(2) {
+    width: 984px;
+    padding-bottom: 21px;
+  }
+
+  p:nth-child(3) {
+    padding-bottom: 37px;
+  }
+}
+
+.about-us__content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  min-height: 335px;
+  padding-left: 182px;
+
+  background-image: url("../img/year-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: -28px 6px;
+  background-size: 217px auto;
+}
+
+.about-us__button {
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 48px;
+  padding-right: 48px;
+  min-width: 80px;
+
+  font-family: $roboto-condensed;
+  font-weight: 700;
+
+  @include font(14, 16);
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $blue;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
