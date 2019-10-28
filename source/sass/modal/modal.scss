@@ -1,99 +1,58 @@
-.feedback {
-  padding-top: 92px;
-  padding-bottom: 98px;
+/* Модальное окно */
+.modal {
+  max-width: 490px;
+  position: relative;
+
+  display: none;
+}
+
+.modal__feedback {
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+
   overflow-x: hidden;
   color: $white;
 
   background-color: $blue;
-}
-
-.feedback__container {
-  position: relative;
-  margin-right: -15px;
-  padding-left: 50%;
-
-  &::before {
-    @include pseudo-elem;
-    top: -109px;
-    left: 177px;
-
-    @include size(686, 641);
-
-    background-image:
-      url("../img/bg-airplane@1x.png"),
-      url("../img/bg-image-form.svg");
-      background-repeat: no-repeat;
-      background-position: right center, left -5px bottom 45px;
-      background-size: 511px auto, 671px 641px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-airplane@2x.png"),
-      url("../img/bg-image-form.svg");
-    }
-  }
-
-  &::after {
-    @include pseudo-elem;
-    top: -35px;
-    right: -4px;
-    width: 311px;
-    height: 602px;
-    background-image: url(../img/bg-image-form2.svg);
-    background-repeat: no-repeat;
-    background-size: 362px, 585px;
-    background-position: -70px -23px;
-  }
 
   h2 {
-    @include reset;
-    margin-bottom: 9px;
-    padding-left: 11px;
-
-    @include font(36, 51);
-    font-weight: 400;
-    font-family: $roboto-condensed;
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include font(28, 39);
   }
 
   p {
-    @include reset;
-    padding-left: 15px;
+    width: 381px;
+    padding-right: 25px;
+  }
+
+  form {
+    margin-top: 15px;
   }
 }
 
-.feedback__form {
-  width: 600px;
+.modal__feedback-form {
+  width: 440px;
 
   form {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
     margin-top: 30px;
   }
 }
 
-.feedback__item {
-  width: 251px;
-
+.modal__feedback-item {
   padding-top: 19px;
   padding-right: 15px;
   padding-bottom: 19px;
-  padding-left: 15px;
+  //padding-left: 15px;
 }
 
-.feedback__item-name {
-  margin-right: 20px;
-}
-
-.feedback__item-text {
-  width: 535px;
-}
-
-.feedback__consent {
-  order: 1;
-}
-
-.feedback__item input[type="text"],
-.feedback__item input[type="tel"] {
+.modal__feedback-item input[type="text"],
+.modal__feedback-item input[type="tel"] {
   width: 100%;
   height: 50px;
   //padding-top: 10px;
@@ -129,13 +88,13 @@
   }
 }
 
-.feedback__item textarea {
+.modal__feedback-item textarea {
   width: 100%;
   height: 131px;
   padding-top: 10px;
   padding-right: 16px;
-  padding-bottom: 10px;
-  padding-left: 16px;
+  //padding-bottom: 10px;
+  //padding-left: 16px;
   resize: none;
   font: inherit;
   color: $white;
@@ -165,12 +124,15 @@
   }
 }
 
-.feedback__consent {
+.modal__feedback-consent {
+  order: 1;
+
   label {
     position: relative;
     display: block;
-    padding-left: 20px;
-    padding-top: 8px;
+    width: 330px;
+    padding-left: 44px;
+    padding-top: 21px;
 
     @include font(14, 16);
 
@@ -179,8 +141,8 @@
 
     &::before {
       @include pseudo-elem;
-      top: 8px;
-      left: -12px;
+      top: 21px;
+      left: 0;
       align-self: flex-start;
       width: 17px;
       height: 16px;
@@ -189,8 +151,8 @@
 
     &::after {
       @include pseudo-elem;
-      top: 11px;
-      left: -6px;
+      top: 24px;
+      left: 8px;
       display: none;
 
       @include size(5, 7);
@@ -210,21 +172,19 @@
   }
 }
 
-.feedback__consent input[type="checkbox"]:checked ~ label::after {
+.modal__feedback-consent input[type="checkbox"]:checked ~ label::after {
   display: block;
 }
 
-.feedback__consent input[type="checkbox"]:focus ~ label::before {
+.modal__feedback-consent input[type="checkbox"]:focus ~ label::before {
   background-color: rgba($white, 0.2);
 }
 
-.feedback__form {
+.modal__feedback-form {
   button {
     flex-grow: 1;
     display: inline-block;
     margin-top: 3px;
-    margin-left: 15px;
-    margin-right: 37px;
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 77px;
@@ -249,5 +209,37 @@
       color: $blue;
       background-color: $white;
     }
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  //@include interactive();
+
+  &::before,
+  &::after {
+    @include pseudo-elem;
+    top: 14px;
+    left: 4px;
+    width: 23px;
+    height: 2px;
+
+    background-color: $white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }

@@ -1,0 +1,158 @@
+.page-footer {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 0;
+
+  @include font(15, 25);
+  color: rgba(#1b2d37, 0.5);
+  background-color: $white;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 58px;
+}
+
+.page-footer__wrapper-left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-right: 102px;
+}
+
+.page-footer__logo {
+  width: 315px;
+  display: flex;
+  padding-left: 24px;
+  padding-right: 5px;
+  padding-bottom: 54px;
+}
+
+.page-footer__icon-logo {
+  padding-right: 13px;
+}
+
+.page-footer__logo-text {
+  margin: 0;
+  padding-top: 5px;
+  @include font(12, 14);
+  font-weight: 500;
+  color: #788891;
+
+  span {
+    width: 149px;
+    display: block;
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: 700;
+    @include font(25, 29);
+    color: #203c42;
+  }
+}
+
+.page-footer__social {
+  padding-left: 24px;
+}
+
+.social__list {
+  @include reset-ul;
+  display: flex;
+}
+
+.social__item {
+  padding-right: 15px;
+}
+
+.page-footer__info {
+  margin-right: 232px;
+}
+
+.page-footer__title {
+  @include reset;
+  padding-bottom: 27px;
+
+  @include font(15, 16);
+  font-weight: 400;
+  font-family: $roboto-condensed;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #203c42;
+}
+
+.page-footer__toggle {
+  display: none;
+}
+
+.page-footer__info-lists {
+  width: 424px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__list-left,
+.page-footer__list-right {
+  @include reset-ul;
+}
+
+.page-footer__link {
+  color: #1b2d37;
+  opacity: 0.5;
+}
+
+.page-footer__list-contacts {
+  @include reset-ul;
+}
+
+.page-footer__bottom {
+  display: flex;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  border-top: 1px solid rgba(#626962, 0.2);
+}
+
+.page-footer__bottom-wrapper {
+  min-width: 1460px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-footer__bottom-left {
+  min-width: 816px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+
+  p {
+    margin: 0;
+    @include font(14, 24);
+    font-weight: 400;
+    font-family: $roboto-condensed;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  a {
+    @include font(14, 24);
+    font-weight: 400;
+    font-family: $roboto-condensed;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+.page-footer__bottom-right {
+  min-width: 192px;
+  margin-left: auto;
+  padding-right: 25px;
+}
+
+.page-footer__bottom-studio {
+  @include font(14, 24);
+  font-weight: 400;
+  font-family: $roboto-condensed;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
