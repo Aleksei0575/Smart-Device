@@ -16,21 +16,18 @@
 }
 
 .capability__container {
-  max-width: 1200px;
   margin: 0 auto;
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+  }
 }
 
 .capability__list {
   @include reset-ul;
   display: flex;
   flex-wrap: wrap;
-  //margin-top: 0;
-  //margin-right: -15px;
-  //margin-bottom: 0;
-  //margin-left: -15px;
-  //padding-left: 0;
 }
 
 .capability__item {
@@ -89,5 +86,112 @@
     font-weight: 400;
     font-family: $roboto-condensed;
     color: $white;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .capability {
+    padding-top: 49px;
+    padding-bottom: 78px;
+
+    h2 {
+      width: 613px;
+      padding-left: 0;
+      padding-bottom: 50px;
+      @include font(32, 45);
+    }
+  }
+
+  .capability__list {
+    li:first-child {
+      padding-bottom: 46px;
+
+      h3 {
+        top: 40px;
+      }
+    }
+
+    li:nth-child(2) {
+      padding-bottom: 46px;
+
+      h3 {
+        top: 40px;
+      }
+    }
+
+    li:last-child {
+      h3 {
+        top: 50px;
+      }
+    }
+  }
+
+  .capability__item {
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+
+  .capability__image {
+    position: relative;
+    margin: 0;
+    height: 256px;
+    overflow: hidden;
+  }
+
+  .capability__link {
+    &::before {
+      bottom: 0;
+    }
+
+    &::after {
+      bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .capability {
+    padding-top: 49px;
+    padding-bottom: 64px;
+
+    h2 {
+      width: 280px;
+      padding-left: 9px;
+      padding-bottom: 43px;
+      @include font(28, 39);
+    }
+  }
+
+  .capability__container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .capability__list {
+    li:first-child {
+      padding-bottom: 30px;
+
+      h3 {
+        top: 20px;
+        left: 35px;
+      }
+    }
+
+    li:nth-child(2) {
+      padding-bottom: 30px;
+
+      h3 {
+        top: 20px;
+        left: 35px;
+      }
+    }
+
+    li:last-child {
+      h3 {
+        top: 29px;
+        left: 35px;
+      }
+    }
   }
 }

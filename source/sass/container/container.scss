@@ -4,3 +4,21 @@
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
 }
+
+@media (max-width: $tablet-width) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .container {
+    max-width: 320px;
+    margin: 0 auto;
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}

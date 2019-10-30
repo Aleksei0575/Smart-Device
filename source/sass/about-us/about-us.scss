@@ -3,10 +3,12 @@
 }
 
 .about-us__container {
-  max-width: 1171px;
   margin: 0 auto;
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
+  @media (min-width: $desktop-width) {
+    max-width: 1171px;
+  }
 
   h2 {
     @include reset;
@@ -32,19 +34,29 @@
   }
 }
 
-.about-us__content {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
-  min-height: 335px;
-  padding-left: 182px;
+.about-us__hidden:first-of-type {
+  display: none;
+}
 
-  background-image: url("../img/year-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: -28px 6px;
-  background-size: 217px auto;
+.about-us__content {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    min-height: 335px;
+    padding-left: 182px;
+
+    background-image: url("../img/year-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: -28px 6px;
+    background-size: 217px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/year-desktop@2x.png");
+    }
+  }
 }
 
 .about-us__button {
@@ -77,5 +89,94 @@
 
   &:active {
     background-color: #2100f5;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about-us {
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 75px;
+  }
+
+  .about-us__container {
+    h2 {
+      padding-bottom: 27px;
+      padding-left: 3px;
+      @include font(32, 45);
+    }
+
+    p:nth-child(2) {
+      width: 532px;
+      padding-bottom: 20px;
+      padding-left: 6px;
+    }
+
+    p:nth-child(3) {
+      width: 533px;
+      padding-bottom: 41px;
+      padding-left: 6px;
+    }
+
+    .about-us__hidden:first-of-type {
+      display: inline;
+    }
+
+    .about-us__hidden:last-of-type {
+      @include visually-hidden();
+    }
+  }
+
+  .about-us__content {
+    @media (min-width: $tablet-width) {
+      min-height: 362px;
+      padding-left: 182px;
+
+      background-image: url("../img/year-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-position: -25px 0px;
+      background-size: 244px auto;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/year-tablet@2x.png");
+      }
+    }
+
+  }
+
+  .about-us__button {
+    margin-left: 7px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about-us {
+    padding-top: 39px;
+    padding-bottom: 64px;
+  }
+
+  .about-us__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about-us__container {
+    h2 {
+      padding-bottom: 21px;
+      padding-left: 4px;
+      @include font(28, 39);
+    }
+
+    p:nth-child(2) {
+      width: 288px;
+      padding-bottom: 40px;
+      padding-left: 6px;
+    }
+
+    p:nth-child(3) {
+      width: 288px;
+      padding-bottom: 27px;
+      padding-left: 6px;
+    }
   }
 }
