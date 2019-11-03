@@ -22,10 +22,10 @@
     <header class="page-header">
       <div class="page-header__wrapper container">
         <a class="page-header__logo logo" aria-label="Логотип SmartDevice">
-          <svg class="page-header__icon-logo" x="0px" y="0px" width="52px" height="52px">
+          <svg class="logo__icon" width="10%" height="10%" viewBox="0 0 52 52">
             <use xlink:href="#icon-logo"/>
           </svg>
-          <p class="page-header__logo-text"><span>Smart Device</span> умные технологии</p>
+          <p class="logo__text"><span>Smart Device</span> умные технологии</p>
         </a>
         <nav class="page-header__nav">
           <button class="page-header__button-menu">
@@ -34,13 +34,13 @@
         </nav>
         <div class="page-header__contacts">
           <a class="page-header__email" href="mailto:info@sd.ru">
-            <svg class="page-header__icon-email" x="0px" y="0px" width="19px" height="14px">
+            <svg class="page-header__icon-email" width="10%" height="10%" viewBox="0 0 19 14">
               <use xlink:href="#icon-email"/>
             </svg>
             <span>info@sd.ru</span>
           </a>
           <a class="page-header__phone" href="tel:+74950005252">
-            <svg class="page-header__icon-phone" x="0px" y="0px" width="18px" height="18px">
+            <svg class="page-header__icon-phone" width="10%" height="10%" viewBox="0 0 18 18">
               <use xlink:href="#icon-phone"/>
             </svg>
             <span>+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
@@ -102,16 +102,16 @@
               </a>
             </li>
             <li class="advantages__item advantages__item-confidentiality">
-              <a class="advantages__link advantages__link-confidentiality">
-                <svg class="advantages__icon advantages__icon-confidentiality" x="0px" y="0px" width="36px" height="31px">
-                  <use xlink:href="#icon-detective"/>
-                </svg>
-                <h3>Полная конфиденциальность</h3>
-                <p>
-                  По желанию клиента  мы обеспечиваем полную конфеденциальность.
-                </p>
-              </a>
-            </li>
+            <a class="advantages__link advantages__link-confidentiality">
+              <svg class="advantages__icon advantages__icon-confidentiality" x="0px" y="0px" width="36px" height="31px">
+                <use xlink:href="#icon-detective"/>
+              </svg>
+              <h3>Полная конфиденциальность</h3>
+              <p>
+                По желанию клиента&nbsp; мы обеспечиваем полную конфеденциальность.
+              </p>
+            </a>
+          </li>
             <li class="advantages__item advantages__item-cost">
               <a class="advantages__link advantages__link-cost">
                 <svg class="advantages__icon advantages__icon-cost" x="0px" y="0px" width="35px" height="35px">
@@ -119,7 +119,7 @@
                 </svg>
                 <h3>Персонализация стоимости</h3>
                 <p>
-                  Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+                  Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
                 </p>
               </a>
             </li>
@@ -158,13 +158,13 @@
                 <h3>Производство печатных плат</h3>
                 <p class="capability__image">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/production-desktop@1x.webp 1x, img/production-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/production-tablet@1x.webp 1x, img/production-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/production-mobile@1x.jpg 1x, img/production-mobile@2x.jpg 2x">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/production-mobile@1x.webp 1x, img/production-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/production-tablet@1x.webp 1x, img/production-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/production-desktop@1x.webp 1x, img/production-desktop@2x.webp 2x">
 
-                    <source media="(min-width: 1024px)" srcset="img/production-desktop@1x.jpg 1x, img/production-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/production-tablet@1x.jpg 1x, img/production-tablet@2x.jpg 2x">
-                    <img src="img/production-mobile@1x.jpg" srcset="img/production-mobile@2x.jpg 2x" width="290" height="256" alt="Производство печатных плат">
+                    <source media="(max-width: 767px)" srcset="img/production-mobile@1x.jpg 1x, img/production-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.jpg 1x, img/production-tablet@2x.jpg 2x">
+                    <img src="img/production-desktop@1x.jpg" srcset="img/production-desktop@2x.jpg 2x" width="370" height="620" alt="Производство печатных плат">
                   </picture>
                 </p>
               </a>
@@ -174,13 +174,13 @@
                 <h3>Монтаж печатных  плат</h3>
                 <p class="capability__image">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/mounting-desktop@1x.webp 1x, img/mounting-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/mounting-tablet@1x.webp 1x, img/mounting-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/mounting-mobile@1x.webp 1x, img/mounting-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/mounting-mobile@1x.webp 1x, img/mounting-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/mounting-tablet@1x.webp 1x, img/mounting-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/mounting-desktop@1x.webp 1x, img/mounting-desktop@2x.webp 2x">
 
-                    <source media="(min-width: 1024px)" srcset="img/mounting-desktop@1x.jpg 1x, img/mounting-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/mounting-tablet@1x.jpg 1x, img/mounting-tablet@2x.jpg 2x">
-                    <img src="img/mounting-mobile@1x.jpg" srcset="img/mounting-mobile@2x.jpg 2x" width="290" height="256" alt="Монтаж печатных  плат">
+                    <source media="(max-width: 767px)" srcset="img/mounting-mobile@1x.jpg 1x, img/mounting-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/mounting-tablet@1x.jpg 1x, img/mounting-tablet@2x.jpg 2x">
+                    <img src="img/mounting-desktop@1x.jpg" srcset="img/mounting-desktop@2x.jpg 2x" width="370" height="620" alt="Монтаж печатных  плат">
                   </picture>
                 </p>
               </a>
@@ -190,13 +190,13 @@
                 <h3>Комплектующие для светотехники</h3>
                 <p class="capability__image">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/components-desktop@1x.webp 1x, img/components-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/components-tablet@1x.webp 1x, img/components-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/components-mobile@1x.webp 1x, img/components-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/components-mobile@1x.webp 1x, img/components-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/components-tablet@1x.webp 1x, img/components-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/components-desktop@1x.webp 1x, img/components-desktop@2x.webp 2x">
 
-                    <source media="(min-width: 1024px)" srcset="img/components-desktop@1x.jpg 1x, img/components-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/components-tablet@1x.jpg 1x, img/components-tablet@2x.jpg 2x">
-                    <img src="img/components-mobile@1x.jpg" srcset="img/components-mobile@2x.jpg 2x" width="290" height="256" alt="Комплектующие для светотехники">
+                    <source media="(max-width: 767px)" srcset="img/components-mobile@1x.jpg 1x, img/components-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/components-tablet@1x.jpg 1x, img/components-tablet@2x.jpg 2x">
+                    <img src="img/components-desktop@1x.jpg" srcset="img/components-desktop@2x.jpg 2x" width="370" height="620" alt="Комплектующие для светотехники">
                   </picture>
                 </p>
               </a>
@@ -241,11 +241,11 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <div class="page-footer__wrapper-left">
-          <a class="page-footer__logo logo" href="#" aria-label="Логотип SmartDevice">
-            <svg class="page-footer__icon-logo" x="0px" y="0px" width="52px" height="52px">
+          <a class="page-footer__logo logo logo__footer" aria-label="Логотип SmartDevice">
+            <svg class="logo__icon" width="10%" height="10%" viewBox="0 0 52 52">
               <use xlink:href="#icon-logo"/>
             </svg>
-            <p class="page-footer__logo-text"><span>Service Device</span> умные технологии</p>
+            <p class="logo__text logo__text--black"><span>Service Device</span> умные технологии</p>
           </a>
           <div class="page-footer__social social">
             <ul class="social__list">
@@ -350,10 +350,10 @@
           <div class="page-footer__bottom-left">
             <p class="page-footer__bottom-notice">Все права защищены</p>
             <p class="page-footer__bottom-copyright">1999-2018 SD Service Devices</p>
-            <a class="page-footer__bottom-privacy">Условия конфиденциальности</a>
+            <a class="page-footer__bottom-privacy" href="#">Условия конфиденциальности</a>
           </div>
           <div class="page-footer__bottom-right">
-            <a class="page-footer__bottom-studio">Developed by wow studio</a>
+            <a class="page-footer__bottom-studio" href="#">Developed by wow studio</a>
           </div>
         </div>
 
@@ -367,11 +367,11 @@
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <div class="modal__feedback-form">
           <form action="#" method="post">
-            <div class="modal__feedback-item">
+            <div class="modal__feedback-item modal__name">
               <label class="visually-hidden" for="modal-name">Имя</label>
               <input id="modal-name" type="text" name="name" placeholder="Имя">
             </div>
-            <div class="modal__feedback-item">
+            <div class="modal__feedback-item modal__tel">
               <label class="visually-hidden" for="modal-tel">Телефон</label>
               <input id="modal-tel" type="tel" name="tel" placeholder="Телефон" required>
             </div>

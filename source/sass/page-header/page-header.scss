@@ -12,39 +12,9 @@
   align-items: center;
 }
 
-.page-header__logo {
-  width: 210px;
-  display: flex;
-  padding-left: 24px;
-  padding-right: 5px;
-}
-
-.page-header__icon-logo {
-  padding-right: 13px;
-}
-
-.page-header__logo-text {
-  margin: 0;
-  padding-top: 5px;
-  font-size: 12px;
-  line-height: 14px;
-  color: #788891;
-
-  span {
-    width: 144px;
-    display: block;
-    font-family: $roboto-condensed;
-    font-style: normal;
-    font-weight: bold;
-    @include font(25, 29);
-    color: #ffffff;
-  }
-}
-
 .page-header__nav {
   width: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 7.8%;
 }
 
 .page-header__button-menu {
@@ -67,42 +37,93 @@
   &::after {
     top: 18px;
   }
-
 }
 
 .page-header__contacts {
   margin-left: auto;
+  margin-right: 3.45%;
+  width: 29.45%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .page-header__email {
-  padding-right: 77px;
+  position: relative;
+  padding-left: 39px;
+
+  svg {
+    @include pseudo-elem;
+    @include size(19, 14);
+    top: 4px;
+    left: 0;
+    fill: $blue;
+  }
 
   span {
     line-height: 18px;
     color: #ffffff;
   }
-}
 
-.page-header__icon-email {
-  padding-right: 10px;
+  &:hover,
+  &:focus {
+    span {
+      color: $blue;
+
+    }
+
+    .page-header__icon-email {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    span, svg {
+      opacity: 0.5;
+    }
+  }
 }
 
 .page-header__phone {
-  padding-right: 50px;
+  position: relative;
+  padding-left: 35px;
+
+  svg {
+    @include pseudo-elem;
+    @include size(18, 18);
+    top: 2px;
+    left: 0;
+    fill: $blue;
+  }
 
   span {
     line-height: 18px;
     color: #ffffff;
   }
-}
 
-.page-header__icon-phone {
-  padding-right: 7px;
+  &:hover,
+  &:focus {
+    span {
+      color: $blue;
+
+    }
+
+    .page-header__icon-phone {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    span, svg {
+      opacity: 0.5;
+    }
+  }
 }
 
 .page-header__button {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 1.71%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 25px;
@@ -117,12 +138,13 @@
   text-transform: uppercase;
   color: #ffffff;
   border: 1px solid #ffffff;
-  background-color: #182d37;
+  background-color: transparent;
   border-radius: 5px;
 
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $blue;
     border: 1px solid $blue;
   }
@@ -139,24 +161,24 @@
     padding-bottom: 22px;
   }
 
-  .page-header__logo {
-    padding-left: 0;
-  }
-
   .page-header__nav {
     margin-right: 37px;
+    margin-left: auto;
   }
 
   .page-header__contacts {
+    width: 11.8%;
     margin-left: 0;
+    margin-right: 0;
   }
 
   .page-header__email {
     padding-right: 0;
-    margin-right: 24px;
 
     svg {
       @include size(25, 18);
+      top: -9px;
+      left: 2px;
     }
 
     span {
@@ -164,16 +186,14 @@
     }
   }
 
-  .page-header__icon-email {
-    padding-right: 0;
-  }
-
   .page-header__phone {
     padding-right: 0;
-    margin-right: auto;
+    //margin-right: auto;
 
     svg {
       @include size(24, 24);
+      top: -14px;
+      left: 11px;
     }
 
     span {
@@ -206,15 +226,36 @@
     }
   }
 
-  .page-header__icon-logo {
-    padding-right: 0;
-  }
+  //.page-header__icon-logo {
+  //  padding-right: 0;
+  //}
 
   .page-header__nav {
     margin-right: 25px;
   }
 
+  .page-header__contacts {
+    width: 76px;
+  }
+
   .page-header__email {
-    margin-right: 9px;
+    padding-left: 0;
+    margin-right: 0;
+
+    svg {
+      position: inherit;
+      top: 3px;
+      left: 6px;
+    }
+  }
+
+  .page-header__phone {
+    padding-left: 0;
+
+    svg {
+      position: inherit;
+      top: 0;
+      left: 0;
+    }
   }
 }

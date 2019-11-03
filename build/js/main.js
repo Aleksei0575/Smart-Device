@@ -84,7 +84,7 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 
-body.addEventListener('click', function (evt) {
-  modal.classList.toggle('modal--show');
-  modal.classList.add('modal--close');
-})
+// body.addEventListener('click', function (evt) {
+//   modal.classList.toggle('modal--show');
+//   modal.classList.add('modal--close');
+// })

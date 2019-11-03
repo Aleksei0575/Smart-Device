@@ -74,6 +74,7 @@
   h2 {
     margin-top: 0;
     margin-bottom: 15px;
+    font-family: $roboto-condensed;
     @include font(28, 39);
   }
 
@@ -98,12 +99,26 @@
   }
 }
 
-.modal__feedback-item {
+.modal__name {
   padding-top: 19px;
   padding-right: 15px;
   padding-bottom: 19px;
   //padding-left: 15px;
 }
+
+.modal__tel {
+  padding-top: 19px;
+  padding-right: 15px;
+  padding-bottom: 19px;
+  //padding-left: 15px;
+}
+
+//.modal__feedback-item {
+//  padding-top: 19px;
+//  padding-right: 15px;
+//  padding-bottom: 19px;
+//  //padding-left: 15px;
+//}
 
 .modal__feedback-item input[type="text"],
 .modal__feedback-item input[type="tel"] {

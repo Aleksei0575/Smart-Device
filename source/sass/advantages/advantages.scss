@@ -1,5 +1,15 @@
 .advantages {
   margin-bottom: 77px;
+  padding-top: 110px;
+  @media (min-width: $desktop-width) {
+    background-image:
+      url("../img/bg-image-advantages.png"),
+      url("../img/bg-advantages-poligon.png"),
+      url("../img/bg-advantages-poligon3.png");
+    background-size: 336px 324px, 872px 873px, 336px 324px;
+    background-position: left 201px top 46px,left 557px top 147px,right 29px bottom 48px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
 }
 
 .advantages__container {
@@ -9,30 +19,6 @@
   position: relative;
   @media (min-width: $desktop-width) {
     max-width: 1171px;
-
-    &::before {
-      @include pseudo-elem;
-      top: -66px;
-      left: -146px;
-      background-image: url("../img/bg-image-advantages.png");
-      background-size: 336px 324px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      @include size(336, 324);
-      z-index: -1;
-    }
-
-    &::after {
-      @include pseudo-elem;
-      top: 35px;
-      left: 208px;
-      background-image: url("../img/bg-advantages-poligon.png");
-      background-size: 872px 873px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      @include size(872, 873);
-      z-index: -1;
-    }
   }
 }
 
@@ -41,21 +27,6 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-
-  @media (min-width: $desktop-width) {
-    &::after {
-      @include pseudo-elem;
-      bottom: 49px;
-      right: -347px;
-      background-image: url("../img/bg-image-advantages.png");
-      background-size: 336px 324px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      @include size(336, 324);
-      z-index: 20;
-      transform: rotate(-180deg);
-    }
-  }
 }
 
 .advantages__item {
@@ -69,11 +40,12 @@
 
   color: $blue;
   background-color: $white;
-  border: 1px solid $gray;
+  border: 1px solid #ebebeb;
   border-left: 3px solid $blue;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
     background-color: $blue;
 
@@ -84,9 +56,12 @@
   }
 }
 
-.advantages__item-term {
-  &:hover .advantages__link-term {
-    fill: #46c1ae;
+.advantages__item {
+  fill: $blue;
+
+  &:hover .advantages__link,
+  &:focus .advantages__link {
+    fill: $white;
   }
 }
 
@@ -213,6 +188,13 @@
   .advantages {
     padding-top: 54px;
     margin-bottom: 0;
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/bg-advantages-poligon.png");
+      background-size: 872px 873px;
+      background-position: left 308px top 147px;
+      background-repeat: no-repeat;
+    }
   }
 
   .advantages__item {
@@ -355,7 +337,7 @@
     padding-top: 71px;
     padding-right: 7px;
     padding-left: 25px;
-    padding-bottom: 23px;
+    padding-bottom: 25px;
     //padding-left: 23px;
 
     h3 {
@@ -372,14 +354,14 @@
 
   .advantages__link-confidentiality {
     width: 237px;
-    padding-top: 66px;
+    padding-top: 65px;
     padding-left: 24px;
-    padding-bottom: 51px;
+    padding-bottom: 36px;
     //padding-right: 25px;
 
     h3 {
-      margin-bottom: -8px;
-      padding-bottom: 0;
+      //margin-bottom: -8px;
+      padding-bottom: 9px;
       @include font(20, 28);
     }
   }

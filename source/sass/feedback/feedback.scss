@@ -11,38 +11,22 @@
   position: relative;
   margin-right: -15px;
   padding-left: 50%;
-
+  
   @media (min-width: $desktop-width) {
-    &::before {
-      @include pseudo-elem;
-      top: -109px;
-      left: 177px;
+    background-image:
+      url("../img/bg-airplane@1x.png"),
+      url("../img/bg-image-form.svg"),
+      url("../img/bg-image-form2.svg");
+    background-repeat: no-repeat;
+    background-position: left 350px top 69px,left 175px bottom -10px,top -60px right 19px;
+    //background-position: left 350px top 381px,left 175px bottom 201px,bottom 82px right 2px;
+    background-size: 511px auto,671px 641px,362px,585px;
+    //background-attachment: fixed;
+    z-index: 1;
 
-      @include size(686, 641);
-
-      background-image:
-        url("../img/bg-airplane@1x.png"),
-        url("../img/bg-image-form.svg");
-      background-repeat: no-repeat;
-      background-position: right center, left -5px bottom 45px;
-      background-size: 511px auto, 671px 641px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-airplane@2x.png"),
-        url("../img/bg-image-form.svg");
-      }
-    }
-
-    &::after {
-      @include pseudo-elem;
-      top: -35px;
-      right: -4px;
-      width: 311px;
-      height: 602px;
-      background-image: url("../img/bg-image-form2.svg");
-      background-repeat: no-repeat;
-      background-size: 362px, 585px;
-      background-position: -70px -23px;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-airplane@2x.png"),
+      url("../img/bg-image-form.svg");
     }
   }
 
@@ -64,6 +48,7 @@
 
 .feedback__form {
   width: 600px;
+  z-index: 20;
 
   form {
     display: flex;
@@ -336,6 +321,11 @@
 
   .feedback__form {
     width: 290px;
+
+    @media (min-width: 330px) and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     form {
       flex-direction: column;

@@ -1,17 +1,23 @@
 .promo {
   margin-top: -113px;
-  margin-bottom: 110px;
+  //margin-bottom: 110px;
   overflow: hidden;
   color: $white;
   background-color: #1b2d37;
-  background-image: url("../img/bg-image-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  min-height: 878px;
+  @media (min-width: $desktop-width) {
+    background-image:
+      url("../img/bg-image-desktop@1x.png"),
+      url("../img/bg-promo-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center bottom,top 117px right 177px;
+    background-size: cover, 713px 655px;
+    min-height: 878px;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-image-desktop@2x.png");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/bg-image-desktop@2x.png"),
+        url("../img/bg-promo-desktop@2x.png");
+    }
   }
 }
 
@@ -102,27 +108,6 @@
   height: 515px;
   padding-top: 107px;
   right: -55px;
-
-  //img {
-  //  position: relative;
-  //  z-index: 10;
-  //}
-
-  &::before {
-    @include pseudo-elem;
-    top: -34px;
-    left: -10px;
-    background-image: url("../img/bg-promo-desktop@1x.png");
-    background-size: 713px 655px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    @include size(713, 655);
-    //z-index: 1;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-promo-desktop@2x.png");
-    }
-  }
 }
 
 .promo__anchor {
@@ -150,16 +135,39 @@
     margin-top: -113px;
     margin-bottom: 0;
     min-height: 0;
+
+    @media (max-width: $tablet-width) {
+      background-image:
+        url("../img/bg-image-desktop@1x.png"),
+        url("../img/promo-image-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-position: center bottom,top 19px right 0px;
+      background-size: cover, 330px 466px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image:
+          url("../img/bg-image-desktop@2x.png"),
+          url("../img/promo-image-tablet@2x.png");
+      }
+    }
+  }
+
+  .promo__wrapper {
+    margin-top: 101px;
+    max-width: 1023px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .promo__description {
-    padding-top: 57px;
-    padding-bottom: 162px;
+    padding-top: 106px;
+    padding-bottom: 164px;
   }
 
   .promo__title {
     width: 310px;
-    padding-left: 62px;
+    padding-left: 88px;
     padding-bottom: 31px;
 
     @include font(60, 70);
@@ -168,21 +176,19 @@
   .promo__text {
     width: 335px;
     padding-bottom: 52px;
-    padding-left: 114px;
+    padding-left: 139px;
     @include font(18, 28);
 
     &::before {
       top: 14px;
-      left: 65px;
+      left: 91px;
       background-image: url("../img/line-decoration-tablet.png");
-      //background-repeat: no-repeat;
-      //background-position: 0 0;
       @include size(33, 2);
     }
   }
 
   .promo__button {
-    padding-left: 115px;
+    padding-left: 140px;
 
     span:first-child {
       display: inline-block;
@@ -196,34 +202,11 @@
 
   .promo__image {
     position: relative;
-    min-width: 330px;
+    width: 330px;
     height: 466px;
     padding-top: 0;
     margin-left: auto;
-    //right: -50%;
-
-    //img {
-    //  position: relative;
-    //  z-index: 10;
-    //}
-
-    &::before {
-      @include pseudo-elem;
-      top: -131px;
-      left: -128px;
-      //left: 50%;
-      //transform: translate(-50%, 0);
-      background-image: url("../img/promo-image-tablet@1x.png");
-      background-size: 330px 466px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      @include size(330, 466);
-      //z-index: 1;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/promo-image-tablet@2x.png");
-      }
-    }
+    right: 0;
   }
 
   .promo__anchor {
@@ -232,16 +215,39 @@
 }
 
 @media (max-width: $mobile-width) {
+  .promo {
+    @media (max-width: $mobile-width) {
+      background-image:
+        url("../img/bg-image-desktop@1x.png"),
+        url("../img/promo-image-mobile@1x.png");
+      background-repeat: no-repeat;
+      background-position: center bottom,top 42px right 0;
+      background-size: cover, 294px 437px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image:
+          url("../img/bg-image-desktop@2x.png"),
+          url("../img/promo-image-tablet@2x.png");
+      }
+    }
+  }
+
+  .promo__wrapper {
+    width: 767px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .promo__description {
     width: 100%;
-    padding-top: 178px;
+    padding-top: 226px;
     padding-bottom: 71px;
   }
 
   .promo__title {
     width: 210px;
     padding-left: 0;
-    padding-bottom: 27px;
+    padding-bottom: 28px;
 
     @include font(40, 47);
     position: relative;
@@ -250,7 +256,7 @@
 
   .promo__text {
     width: 221px;
-    padding-bottom: 41px;
+    padding-bottom: 39px;
     padding-left: 51px;
     @include font(16, 25);
 
@@ -262,7 +268,7 @@
   }
 
   .promo__button {
-    padding-left: 1px;
+    padding-left: 3px;
 
     span:first-child {
       display: none;
@@ -302,7 +308,7 @@
 
   .promo__image {
     position: relative;
-    min-width: 294px;
+    width: 294px;
     height: 437px;
     padding-top: 0;
     margin-left: auto;
@@ -311,24 +317,6 @@
     img {
       position: relative;
       z-index: 1;
-    }
-
-    &::before {
-      @include pseudo-elem;
-      top: -108px;
-      left: -336px;
-      //left: 50%;
-      //transform: translate(-50%, 0);
-      background-image: url("../img/promo-image-mobile@1x.png");
-      background-size: 294px 437px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      @include size(294, 437);
-      z-index: 1;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/promo-image-tablet@2x.png");
-      }
     }
   }
 }

@@ -1,0 +1,55 @@
+.logo {
+  width: 200px;
+  display: flex;
+  padding-left: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__footer {
+  width: 214px;
+}
+
+.logo__icon {
+  @include size(52, 52);
+}
+
+.logo__text {
+  margin: 0;
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 500;
+  @include font(12, 14);
+  color: #788891;
+
+  span {
+    display: block;
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: 700;
+    @include font(25, 29);
+    color: #ffffff;
+  }
+
+  &--black {
+    span {
+      color: $black;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .logo {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .logo {
+    width: 44px;
+  }
+
+  .logo__icon {
+    @include size(38, 38);
+  }
+}

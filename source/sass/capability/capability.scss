@@ -37,6 +37,11 @@
   padding-right: 14px;
   padding-bottom: 14px;
   padding-left: 14px;
+  object-fit: cover;
+
+  @media (min-width: $desktop-width) {
+    flex: 1 1;
+  }
 }
 
 .capability__link {
@@ -46,7 +51,7 @@
   &::before {
     @include pseudo-elem;
     right: 0;
-    bottom: 19px;
+    bottom: 17px;
     z-index: 1;
 
     @include size(63, 63);
@@ -57,7 +62,7 @@
   &::after {
     @include pseudo-elem;
     right: 30px;
-    bottom: 47px;
+    bottom: 45px;
     z-index: 1;
 
     @include size(6, 6);

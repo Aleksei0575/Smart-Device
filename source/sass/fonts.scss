@@ -22,6 +22,17 @@
 
 @font-face {
   font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-display: swap;
+  src: local("Roboto Regular"),
+  local("Roboto-Regular"),
+  url("../fonts/Roboto-Regular.woff2") format("woff2"),
+  url("../fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
