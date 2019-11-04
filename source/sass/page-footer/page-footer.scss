@@ -109,9 +109,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  @media (min-width: $desktop-width) {
+  //@media (max-width: $desktop-width) {
     width: 1460px;
-  }
+  //}
 }
 
 .page-footer__bottom-left {
@@ -213,6 +213,7 @@
 
   .page-footer__bottom {
     justify-content: space-between;
+    padding-top: 20px;
   }
 
   .page-footer__bottom-wrapper {

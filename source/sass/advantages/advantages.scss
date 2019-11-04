@@ -1,15 +1,14 @@
 .advantages {
   margin-bottom: 77px;
   padding-top: 110px;
-  @media (min-width: $desktop-width) {
-    background-image:
-      url("../img/bg-image-advantages.png"),
-      url("../img/bg-advantages-poligon.png"),
-      url("../img/bg-advantages-poligon3.png");
-    background-size: 336px 324px, 872px 873px, 336px 324px;
-    background-position: left 201px top 46px,left 557px top 147px,right 29px bottom 48px;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-  }
+
+  background-image:
+    url("../img/bg-image-advantages.png"),
+    url("../img/bg-advantages-poligon.png"),
+    url("../img/bg-advantages-poligon3.png");
+  background-size: 336px 324px, 872px 873px, 336px 324px;
+  background-position: left 201px top 46px,left 557px top 147px,right 29px bottom 48px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 
 .advantages__container {
@@ -33,6 +32,8 @@
   width: 48.8%;
   min-height: 210px;
   margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
 
   &:nth-child(odd) {
     margin-right: auto;
@@ -42,6 +43,7 @@
 .advantages__link {
   display: block;
   position: relative;
+  flex-grow: 1;
 
   color: $blue;
   background-color: $white;
@@ -198,7 +200,7 @@
     @media (max-width: $tablet-width) {
       background-image: url("../img/bg-advantages-poligon.png");
       background-size: 872px 873px;
-      background-position: left 308px top 147px;
+      background-position: left 210px top 89px;
       background-repeat: no-repeat;
     }
   }
@@ -286,6 +288,7 @@
   .advantages {
     padding-top: 37px;
     margin-bottom: 0;
+    background-image: none;
   }
 
   .advantages__container {
@@ -364,7 +367,7 @@
   .advantages__link-cost {
     //width: 249px;
     padding-top: 69px;
-    padding-right: 10px;
+    padding-right: 12px;
     padding-left: 25px;
     padding-bottom: 27px;
 

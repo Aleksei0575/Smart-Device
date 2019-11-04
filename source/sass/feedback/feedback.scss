@@ -1,6 +1,5 @@
 .feedback {
   padding-top: 92px;
-  padding-bottom: 98px;
   overflow-x: hidden;
   color: $white;
 
@@ -11,28 +10,24 @@
   position: relative;
   margin-right: -15px;
   padding-left: 50%;
+  padding-bottom: 98px;
   @media (min-width: 1024px) and (max-width: 1299px) {
     padding-left: calc(50% - 114px);
   }
-  
-  @media (min-width: $desktop-width) {
-    background-image:
-      url("../img/bg-airplane@1x.png"),
-      url("../img/bg-image-form.svg"),
-      url("../img/bg-image-form2.svg");
-    background-repeat: no-repeat;
-    background-position: left calc(50% - 362px) top 69px,left calc(50% - 457px) top -152px,right calc(50% - 770px) top -60px;
-    overflow-x: hidden;
-    //background-position: left 350px top 69px,left 175px bottom -10px,top -60px right 19px;
-    //background-position: left 350px top 381px,left 175px bottom 201px,bottom 82px right 2px;
-    background-size: 511px auto,671px 641px,362px,585px;
-    //background-attachment: fixed;
-    z-index: 1;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-airplane@2x.png"),
-      url("../img/bg-image-form.svg");
-    }
+  background-image:
+    url("../img/bg-airplane@1x.png"),
+    url("../img/bg-image-form.svg"),
+    url("../img/bg-image-form2.svg");
+  background-repeat: no-repeat;
+  background-position: left calc(50% - 362px) top 69px,left calc(50% - 457px) top -152px,right calc(50% - 822px) top -60px;
+  overflow-x: hidden;
+  background-size: 511px auto,671px 641px,466px,641px;
+  z-index: 1;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-airplane@2x.png"),
+    url("../img/bg-image-form.svg");
   }
 
   h2 {
@@ -245,11 +240,13 @@
 @media (max-width: $tablet-width) {
   .feedback {
     padding-top: 79px;
-    padding-bottom: 88px;
+    padding-bottom: 90px;
   }
 
   .feedback__container {
     padding-left: 10%;
+    background-image: none;
+    padding-bottom: 0;
 
     h2 {
       margin-bottom: 16px;
@@ -311,6 +308,7 @@
   .feedback__container {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 0;
 
     h2 {
       padding-left: 0;

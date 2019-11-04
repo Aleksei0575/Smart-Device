@@ -3,12 +3,10 @@
 }
 
 .about-us__container {
+  max-width: 1171px;
   margin: 0 auto;
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
-  @media (min-width: $desktop-width) {
-    max-width: 1171px;
-  }
 
   h2 {
     @include reset;
@@ -39,23 +37,21 @@
 }
 
 .about-us__content {
-  @media (min-width: $desktop-width) {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    min-height: 335px;
-    padding-left: 182px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  min-height: 335px;
+  padding-left: 182px;
 
-    background-image: url("../img/year-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-position: -28px 6px;
-    background-size: 217px auto;
+  background-image: url("../img/year-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: -28px 6px;
+  background-size: 217px auto;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/year-desktop@2x.png");
-    }
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/year-desktop@2x.png");
   }
 }
 
@@ -128,7 +124,7 @@
   }
 
   .about-us__content {
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (max-width: $tablet-width) {
       min-height: 362px;
       padding-left: 182px;
 
@@ -178,5 +174,11 @@
       padding-bottom: 27px;
       padding-left: 6px;
     }
+  }
+
+  .about-us__content {
+    background-image: none;
+    min-height: 0px;
+    padding-left: 0;
   }
 }
