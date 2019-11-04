@@ -294,6 +294,7 @@
 
   .page-footer__info {
     width: 100%;
+    margin-right: 0;
     padding-top: 0;
     display: flex;
     flex-wrap: wrap;
@@ -301,6 +302,8 @@
 
     .page-footer__title {
       padding: 0;
+      padding-top: 29px;
+      padding-bottom: 30px;
     }
 
     .page-footer__toggle-wrapper {
@@ -308,7 +311,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      cursor: pointer;
+      position: relative;
     }
 
     .page-footer__icon--open {
@@ -326,14 +329,21 @@
     .page-footer__toggle {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
 
-      @include size(50, 72);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      //@include size(100%, 100%);
       margin-right: $mobile-padding * -1;
 
-      background-color: transparent;
+      //background-color: transparent;
       border: none;
       cursor: pointer;
+      background-color: transparent;
     }
 
     &:focus {
@@ -350,15 +360,16 @@
 
     .page-footer__title {
       padding: 0;
+      padding-top: 29px;
+      padding-bottom: 30px;
     }
 
     .page-footer__toggle-wrapper {
       width: 100%;
-      padding-bottom: 7px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      cursor: pointer;
+      position: relative;
     }
 
     .page-footer__icon--open {
@@ -372,14 +383,21 @@
     .page-footer__toggle {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
 
-      @include size(26, 72);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% + 13px);
+      height: 100%;
+
+      //@include size(100%, 100%);
       margin-right: $mobile-padding * -1;
 
-      background-color: transparent;
+      //background-color: transparent;
       border: none;
       cursor: pointer;
+      background-color: transparent;
     }
 
     &:focus {

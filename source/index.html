@@ -10,6 +10,7 @@
     <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="keywords" content="Печатные платы, производство, монтаж, производство и монтаж, поставка комплектующих, поставка блоков, поставка модулей">
@@ -102,16 +103,16 @@
               </a>
             </li>
             <li class="advantages__item advantages__item-confidentiality">
-            <a class="advantages__link advantages__link-confidentiality">
-              <svg class="advantages__icon advantages__icon-confidentiality" x="0px" y="0px" width="36px" height="31px">
-                <use xlink:href="#icon-detective"/>
-              </svg>
-              <h3>Полная конфиденциальность</h3>
-              <p>
-                По желанию клиента&nbsp; мы обеспечиваем полную конфеденциальность.
-              </p>
-            </a>
-          </li>
+              <a class="advantages__link advantages__link-confidentiality">
+                <svg class="advantages__icon advantages__icon-confidentiality" x="0px" y="0px" width="36px" height="31px">
+                  <use xlink:href="#icon-detective"/>
+                </svg>
+                <h3>Полная конфиденциальность</h3>
+                <p>
+                  По желанию клиента&nbsp; мы обеспечиваем полную конфеденциальность.
+                </p>
+              </a>
+            </li>
             <li class="advantages__item advantages__item-cost">
               <a class="advantages__link advantages__link-cost">
                 <svg class="advantages__icon advantages__icon-cost" x="0px" y="0px" width="35px" height="35px">
@@ -241,7 +242,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <div class="page-footer__wrapper-left">
-          <a class="page-footer__logo logo logo__footer" aria-label="Логотип SmartDevice">
+          <a class="page-footer__logo logo logo--footer" aria-label="Логотип SmartDevice">
             <svg class="logo__icon" width="10%" height="10%" viewBox="0 0 52 52">
               <use xlink:href="#icon-logo"/>
             </svg>
@@ -289,6 +290,7 @@
               </svg>
             </button>
           </div>
+          
           <div class="page-footer__info-lists">
             <ul class="page-footer__list-left">
               <li class="page-footer__item">
@@ -361,7 +363,7 @@
     </footer>
 
     <!-- Модальное окно -->
-    <section class="modal modal--close">
+    <section class="modal modal--open">
       <div class="modal__container modal__feedback">
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
@@ -383,7 +385,7 @@
               <input class="visually-hidden" id="modal-consent" type="checkbox" name="consent" checked>
               <label for="modal-consent">Я согласен на обработку  персональных данных</label>
             </div>
-            <button type="submit">Задать вопрос</button>
+            <button type="submit">Отправить</button>
           </form>
         </div>
         <button class="modal__close" type="button">

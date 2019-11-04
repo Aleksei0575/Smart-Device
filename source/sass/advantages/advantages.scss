@@ -30,8 +30,13 @@
 }
 
 .advantages__item {
-  width: 50%;
+  width: 48.8%;
+  min-height: 210px;
   margin-bottom: 28px;
+
+  &:nth-child(odd) {
+    margin-right: auto;
+  }
 }
 
 .advantages__link {
@@ -56,22 +61,22 @@
   }
 }
 
-.advantages__item {
+.advantages__link {
   fill: $blue;
 
-  &:hover .advantages__link,
-  &:focus .advantages__link {
+  &:hover .advantages__icon,
+  &:focus .advantages__icon {
     fill: $white;
   }
 }
 
 .advantages__link-term {
-  width: 471px;
+  //width: 471px;
 
-  padding-left: 43px;
-  padding-right: 53px;
   padding-top: 96px;
+  padding-right: 53px;
   padding-bottom: 65px;
+  padding-left: 43px;
 
   h3 {
     margin: 0;
@@ -96,12 +101,12 @@
 }
 
 .advantages__link-delivery {
-  width: 480px;
-  margin-left: 14px;
-  padding-left: 43px;
-  padding-right: 45px;
+  //width: 480px;
+
   padding-top: 96px;
+  padding-right: 44px;
   padding-bottom: 65px;
+  padding-left: 43px;
 
   h3 {
     margin: 0;
@@ -126,11 +131,12 @@
 }
 
 .advantages__link-confidentiality {
-  width: 405px;
-  padding-left: 43px;
-  padding-right: 117px;
+  //width: 405px;
+
   padding-top: 97px;
+  padding-right: 117px;
   padding-bottom: 110px;
+  padding-left: 43px;
 
   h3 {
     margin: 0;
@@ -155,12 +161,12 @@
 }
 
 .advantages__link-cost {
-  width: 480px;
-  margin-left: 14px;
-  padding-left: 43px;
-  padding-right: 45px;
+  //width: 480px;
+
   padding-top: 96px;
+  padding-right: 45px;
   padding-bottom: 88px;
+  padding-left: 43px;
 
   h3 {
     margin: 0;
@@ -198,16 +204,16 @@
   }
 
   .advantages__item {
-    //width: 345px;
+    width: 48%;
     margin-bottom: 28px;
   }
 
   .advantages__link-term {
-    width: 297px;
-    padding-top: 68px;
-    padding-right: 23px;
+    //width: 297px;
+    padding-top: 65px;
+    padding-right: 24px;
     padding-bottom: 40px;
-    padding-left: 23px;
+    padding-left: 25px;
 
     h3 {
       padding-bottom: 9px;
@@ -221,9 +227,8 @@
   }
 
   .advantages__link-delivery {
-    width: 292px;
-    margin-left: 14px;
-    padding-top: 67px;
+    //width: 292px;
+    padding-top: 65px;
     padding-right: 23px;
     padding-bottom: 19px;
     padding-left: 23px;
@@ -240,11 +245,12 @@
   }
 
   .advantages__link-confidentiality {
-    width: 297px;
+    //width: 297px;
     padding-top: 67px;
     padding-right: 23px;
-    padding-bottom: 53px;
-    padding-left: 23px;
+    padding-bottom: 52px;
+    padding-left: 22px;
+    //padding: 67px 22px 52px;
 
     h3 {
       padding-bottom: 14px;
@@ -258,7 +264,7 @@
   }
 
   .advantages__link-cost {
-    width: 297px;
+    //width: 297px;
     padding-top: 68px;
     padding-right: 23px;
     padding-bottom: 35px;
@@ -273,23 +279,6 @@
     position: absolute;
     top: 26px;
     left: 25px;
-  }
-
-
-  @media (min-width: $tablet-width) {
-    .advantages__container {
-      &::after {
-        @include pseudo-elem;
-        top: 35px;
-        left: 208px;
-        background-image: url("../img/advantages-poligon-tablet.png");
-        background-size: 559px 873px;
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        @include size(559, 873);
-        z-index: -1;
-      }
-    }
   }
 }
 
@@ -309,11 +298,12 @@
   }
 
   .advantages__item {
+    width: 100%;
     margin-bottom: 19px;
   }
 
   .advantages__link-term {
-    width: 236px;
+    //width: 236px;
     padding-top: 69px;
     padding-left: 25px;
     padding-bottom: 26px;
@@ -332,8 +322,7 @@
   }
 
   .advantages__link-delivery {
-    width: 252px;
-    margin-left: 0;
+    //width: 252px;
     padding-top: 71px;
     padding-right: 7px;
     padding-left: 25px;
@@ -353,7 +342,7 @@
   }
 
   .advantages__link-confidentiality {
-    width: 237px;
+    //width: 237px;
     padding-top: 65px;
     padding-left: 24px;
     padding-bottom: 36px;
@@ -373,8 +362,7 @@
   }
 
   .advantages__link-cost {
-    width: 249px;
-    margin-left: 0;
+    //width: 249px;
     padding-top: 69px;
     padding-right: 10px;
     padding-left: 25px;
