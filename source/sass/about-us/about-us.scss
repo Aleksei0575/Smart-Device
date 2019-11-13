@@ -95,6 +95,13 @@
     margin-bottom: 0;
     padding-top: 25px;
     padding-bottom: 73px;
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/bg-advantages-poligon.png");
+      background-size: 872px 873px;
+      background-position: left 210px top -561px;
+      background-repeat: no-repeat;
+    }
   }
 
   .about-us__container {
@@ -149,6 +156,7 @@
   .about-us {
     padding-top: 39px;
     padding-bottom: 64px;
+    background-image: none;
   }
 
   .about-us__container {
