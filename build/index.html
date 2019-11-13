@@ -227,7 +227,7 @@
                   <textarea id="message" name="message" placeholder="Ваш вопрос" required=""></textarea>
                 </div>
                 <div class="form__item form__consent">
-                  <input class="visually-hidden" id="consent" type="checkbox" name="consent" checked="">
+                  <input class="visually-hidden" id="consent" type="checkbox" name="consent" checked="" required="">
                   <label for="consent">Я согласен на обработку  персональных данных</label>
                 </div>
                 <button type="submit">Задать вопрос</button>
@@ -281,7 +281,7 @@
         <div class="page-footer__info">
           <div class="page-footer__toggle-wrapper">
             <h2 class="page-footer__title">Разделы сайта</h2>
-            <button class="page-footer__toggle">
+            <button class="page-footer__toggle page-footer__accordion">
               <svg class="page-footer__icon page-footer__icon--open" x="0px" y="0px" width="16px" height="16px">
                 <use xlink:href="#icon-open"></use>
               </svg>
@@ -322,7 +322,7 @@
         <div class="page-footer__contacts">
           <div class="page-footer__toggle-wrapper">
             <h2 class="page-footer__title">Наш офис</h2>
-            <button class="page-footer__toggle">
+            <button class="page-footer__toggle page-footer__accordion">
               <svg class="page-footer__icon page-footer__icon--open" x="0px" y="0px" width="16px" height="16px">
                 <use xlink:href="#icon-open"></use>
               </svg>
@@ -382,7 +382,7 @@
               <textarea id="modal-message" name="message" placeholder="Ваш вопрос" required=""></textarea>
             </div>
             <div class="form__modal-consent">
-              <input class="visually-hidden" id="modal-consent" type="checkbox" name="consent" checked="">
+              <input class="visually-hidden" id="modal-consent" type="checkbox" name="consent" checked="" required="">
               <label for="modal-consent">Я согласен на обработку  персональных данных</label>
             </div>
             <button type="submit">Отправить</button>

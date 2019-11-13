@@ -56,9 +56,9 @@ openModalBatton.addEventListener('click', function (evt) {
     userName.value = storageName;
     userTel.value = storageTel;
     userMessage.value = storageMessage;
-    userName.focus();
-  } else {
     userTel.focus();
+  } else {
+    userName.focus();
   }
 });
 
@@ -88,3 +88,29 @@ window.addEventListener('keydown', function (evt) {
 //   modal.classList.toggle('modal--show');
 //   modal.classList.add('modal--close');
 // })
+
+var anchorPromo = document.querySelector('.promo__anchor');
+var buttonPromo = document.querySelector('.promo__button');
+
+
+anchorPromo.addEventListener('click', function (evt) {
+  evt.preventDefault();
+
+  var blockAdvantages = anchorPromo.getAttribute('href');
+
+  document.querySelector(blockAdvantages).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+
+buttonPromo.addEventListener('click', function (evt) {
+  evt.preventDefault();
+
+  var blockFeedback = buttonPromo.getAttribute('href');
+
+  document.querySelector(blockFeedback).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});

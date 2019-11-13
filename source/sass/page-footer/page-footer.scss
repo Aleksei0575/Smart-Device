@@ -75,8 +75,8 @@
   display: flex;
   justify-content: space-between;
   @media (max-width: 1060px) and (min-width: 1024px) {
-    width: 358px;
-    justify-content: flex-start;
+    width: 368px;
+    justify-content: space-between;
   }
 }
 
@@ -129,6 +129,9 @@
   display: flex;
   justify-content: space-between;
   padding-left: 25px;
+  @media (max-width: 1200px) and (min-width: 1024px) {
+    min-width: 770px;
+  }
 
   p {
     margin: 0;
