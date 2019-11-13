@@ -19,6 +19,9 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin-right: 14.3%;
+  @media (max-width: 1480px) and (min-width: 1024px) {
+    margin-right: auto;
+  }
 }
 
 .page-footer__logo {
@@ -46,6 +49,9 @@
 
 .page-footer__info {
   margin-right: 16%;
+  @media (max-width: 1240px) and (min-width: 1024px) {
+    margin-right: auto;
+  }
 }
 
 .page-footer__title {
@@ -68,6 +74,10 @@
   width: 424px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1060px) and (min-width: 1024px) {
+    width: 358px;
+    justify-content: flex-start;
+  }
 }
 
 .page-footer__list-left,

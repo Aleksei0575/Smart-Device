@@ -15,6 +15,9 @@
 .page-header__nav {
   width: 40px;
   margin-left: 7.8%;
+  @media (max-width: 1200px) and (min-width: 1024px) {
+    margin-left: auto;
+  }
 }
 
 .page-header__button-menu {
@@ -42,7 +45,7 @@
 .page-header__contacts {
   margin-left: auto;
   margin-right: 3.45%;
-  width: 29.45%;
+  //width: 29.45%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -52,6 +55,7 @@
 .page-header__email {
   position: relative;
   padding-left: 39px;
+  margin-right: 87px;
 
   svg {
     @include pseudo-elem;
@@ -174,6 +178,7 @@
 
   .page-header__email {
     padding-right: 0;
+    margin-right: 0;
 
     svg {
       @include size(25, 18);

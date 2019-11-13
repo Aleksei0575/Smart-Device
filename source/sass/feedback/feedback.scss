@@ -38,6 +38,8 @@
     @include font(36, 51);
     font-weight: 400;
     font-family: $roboto-condensed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   p {

@@ -139,13 +139,13 @@
       url("../img/bg-image-desktop@1x.png"),
       url("../img/promo-image-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: center bottom,top 19px right 0px;
+    background-position: center bottom,top 19px right 0;
     background-size: cover, 330px 466px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image:
         url("../img/bg-image-desktop@2x.png"),
-          rl("../img/promo-image-tablet@2x.png");
+        url("../img/promo-image-tablet@2x.png");
     }
   }
 

@@ -38,6 +38,9 @@
   background-color: rgba($white, 0.1);
   border: 1px solid transparent;
 
+  -webkit-appearance: none;
+  border-radius: 0;
+
   &::-webkit-input-placeholder {
     color: $white;
   }
@@ -73,6 +76,9 @@
   color: $white;
   background-color: rgba($white, 0.1);
   border: 1px solid transparent;
+
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &::-webkit-input-placeholder {
     color: $white;
@@ -233,6 +239,9 @@
   border: 1px solid transparent;
   box-sizing: border-box;
 
+  -webkit-appearance: none;
+  border-radius: 0;
+
   &::-webkit-input-placeholder {
     color: $white;
   }
@@ -276,6 +285,9 @@
   background-color: rgba($white, 0.1);
   border: 1px solid transparent;
   box-sizing: border-box;
+
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &::-webkit-input-placeholder {
     color: $white;

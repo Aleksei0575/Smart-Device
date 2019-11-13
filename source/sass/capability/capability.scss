@@ -77,6 +77,15 @@
     display: block;
     width: 100%;
     opacity: 0.2;
+    
+    &:hover,
+    &:focus {
+      opacity: 0.4;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 
   h3 {
@@ -91,6 +100,19 @@
     font-weight: 400;
     font-family: $roboto-condensed;
     color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: #0089eb;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: #2100f5;
+    }
   }
 }
 
