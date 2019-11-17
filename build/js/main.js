@@ -172,20 +172,20 @@ toggleContactsBlock.addEventListener('click', function (evt) {
 });
 
 // Маска номера телефона
+// С примеров по ссылке
 // var phoneMask = IMask(
 //   document.querySelectorAll('input[type=tel]'), {
 //     mask: '+{7}(000)000-00-00'
 //   })
 
+// С примеров по ссылке
 var element = document.querySelectorAll('input[type=tel]');
 var maskOptions = {
   mask: '+{7}(000)000-00-00'
 };
 var mask = IMask(element, maskOptions);
 
-
-
-
+// Нашел функцию
 // var phoneMask = function () {
 //   var telInputs = Array.prototype.slice.call(document.querySelectorAll('input[type=tel]'));
 //   var maskOptions = {
@@ -197,98 +197,4 @@ var mask = IMask(element, maskOptions);
 //       var mask = IMask(it, maskOptions);
 //     }
 //   });
-// }
-
-// (function () {
-//   var telInputs = Array.prototype.slice.call(document.querySelectorAll('input[type=tel]'));
-//   var maskOptions = {
-//     mask: '+{7}(000)000-00-00'
-//   };
-//
-//
-//   telInputs.forEach(function (it) {
-//     if (it) {
-//       var mask = IMask(it, maskOptions);
-//     }
-//   });
-// })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var footerInfo = document.querySelector('.page-footer__info');
-// if (footerInfo) {
-//   var toggleInfoBlock = footerInfo.querySelector('.page-footer__toggle-wrapper');
-//   var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');
-// }
-//
-// var footerContact = document.querySelector('.page-footer__contacts');
-// if (footerContact) {
-//   var toggleContactBlock = footerContact.querySelector('.page-footer__toggle-wrapper');
-// }
-//
-// var classRemove = function (el, name) {
-//   if (el.classList.contains(name)) {
-//     el.classList.remove(name);
-//   }
-// };
-//
-// var classToggle = function (el1, el2, name) {
-//   if (el1.classList.contains(name)) {
-//     el1.classList.remove(name);
-//     if (el2 && !el2.classList.contains(name)) {
-//       el2.classList.add(name);
-//     }
-//   } else {
-//     el1.classList.add(name);
-//   }
-// };
-//
-// if (toggleInfoBlock) {
-//   classRemove(listInfo, 'page-footer__info-lists--close');
-//
-//   toggleInfoBlock.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     classToggle(footerInfo, footerContact, 'page-footer__info-lists--close');
-//   });
-// }
-
-// if (toggleInfoBlock) {
-//   classRemove(listInfo, 'page-footer__info-lists--close');
-//
-//   toggleInfoBlock.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     classToggle(footerInfo, footerContact, 'page-footer__accordion--close');
-//   });
-// }
-
-// if (toggleContactBlock) {
-//   classRemove(footerContact, 'footer__info_nojs');
-//
-//   toggleContactBlock.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     classToggle(footerContact, footerInfo, 'page-footer__accordion--close');
-//   });
-// }
-
-
-// var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');
-// undefined
-// if (footerInfo) {
-//   classRemove(listInfo, 'page-footer__info-lists--close');
 // }
