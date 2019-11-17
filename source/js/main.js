@@ -89,6 +89,7 @@ window.addEventListener('keydown', function (evt) {
 //   modal.classList.add('modal--close');
 // })
 
+// Скролл страницы
 var anchorPromo = document.querySelector('.promo__anchor');
 var buttonPromo = document.querySelector('.promo__button');
 
@@ -114,3 +115,86 @@ buttonPromo.addEventListener('click', function (evt) {
     block: 'start'
   });
 });
+
+// Аккордеон для мобильной версии
+var footerInfo = document.querySelector('.page-footer__info');
+var toggleInfoBlock = footerInfo.querySelector('.page-footer__toggle-wrapper');
+var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');
+var buttonInfo = toggleInfoBlock.querySelector('.page-footer__toggle');
+var buttonOpenInfo = buttonInfo.querySelector('.page-footer__icon--open');
+var buttonCloseInfo = buttonInfo.querySelector('.page-footer__icon--close');
+
+var footerContacts = document.querySelector('.page-footer__contacts');
+var toggleContactsBlock = footerContacts.querySelector('.page-footer__toggle-wrapper');
+var listContacts = footerContacts.querySelector('.page-footer__list-contacts--open');
+var buttonContacts = toggleContactsBlock.querySelector('.page-footer__toggle');
+var buttonOpenContacts = buttonContacts.querySelector('.page-footer__icon--open');
+var buttonCloseContacts = buttonContacts.querySelector('.page-footer__icon--close');
+
+toggleInfoBlock.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  if (listInfo.classList.contains('page-footer__info-lists--close')) {
+    listInfo.classList.toggle('page-footer__info-lists--close');
+    listContacts.classList.remove('page-footer__list-contacts--open');
+    listContacts.classList.add('page-footer__list-contacts--close');
+
+    buttonOpenInfo.style.display = 'none';
+    buttonCloseInfo.style.display = 'block';
+  } else if ('page-footer__info-lists--open') {
+    listInfo.classList.toggle('page-footer__info-lists--close');
+    listContacts.classList.remove('page-footer__list-contacts--close');
+    listContacts.classList.add('page-footer__list-contacts--open');
+
+    buttonOpenInfo.style.display = 'block';
+    buttonCloseInfo.style.display = 'none';
+  }
+});
+
+toggleContactsBlock.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (listContacts.classList.contains('page-footer__list-contacts--open')) {
+    listContacts.classList.remove('page-footer__list-contacts--open');
+    listContacts.classList.add('page-footer__list-contacts--close');
+    listInfo.classList.remove('page-footer__info-lists--close');
+    listInfo.classList.add('page-footer__info-lists--open');
+
+    buttonCloseContacts.style.display = 'none';
+    buttonOpenContacts.style.display = 'block';
+  } else if ('page-footer__list-contacts--close') {
+    listContacts.classList.remove('page-footer__list-contacts--close');
+    listContacts.classList.add('page-footer__list-contacts--open');
+    listInfo.classList.remove('page-footer__info-lists--open');
+    listInfo.classList.add('page-footer__info-lists--close');
+
+    buttonCloseContacts.style.display = 'block';
+    buttonOpenContacts.style.display = 'none';
+  }
+});
+
+// Маска номера телефона
+// С примеров по ссылке
+// var phoneMask = IMask(
+//   document.querySelectorAll('input[type=tel]'), {
+//     mask: '+{7}(000)000-00-00'
+//   })
+
+// С примеров по ссылке
+var element = document.querySelectorAll('input[type=tel]');
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+var mask = IMask(element, maskOptions);
+
+// Нашел функцию
+// var phoneMask = function () {
+//   var telInputs = Array.prototype.slice.call(document.querySelectorAll('input[type=tel]'));
+//   var maskOptions = {
+//     mask: '+{7}(000)000-00-00'
+//   };
+//
+//   telInputs.forEach(function (it) {
+//     if (it) {
+//       var mask = IMask(it, maskOptions);
+//     }
+//   });
+// }

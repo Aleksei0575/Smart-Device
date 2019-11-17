@@ -337,7 +337,13 @@
     }
 
     .page-footer__info-lists {
-      display: none;
+      &--close {
+        display: none;
+      }
+
+      &--open {
+        display: block;
+      }
     }
 
     .page-footer__toggle {
@@ -358,6 +364,7 @@
       border: none;
       cursor: pointer;
       background-color: transparent;
+      outline: none;
     }
 
     &:focus {
@@ -394,6 +401,16 @@
       display: block;
     }
 
+    .page-footer__list-contacts {
+      &--close {
+        display: none;
+      }
+
+      &--open {
+        display: block;
+      }
+    }
+
     .page-footer__toggle {
       display: flex;
       align-items: center;
@@ -412,6 +429,7 @@
       border: none;
       cursor: pointer;
       background-color: transparent;
+      outline: none;
     }
 
     &:focus {

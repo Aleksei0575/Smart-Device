@@ -89,6 +89,7 @@ window.addEventListener('keydown', function (evt) {
 //   modal.classList.add('modal--close');
 // })
 
+// Скролл страницы
 var anchorPromo = document.querySelector('.promo__anchor');
 var buttonPromo = document.querySelector('.promo__button');
 
@@ -114,3 +115,180 @@ buttonPromo.addEventListener('click', function (evt) {
     block: 'start'
   });
 });
+
+// Аккордеон для мобильной версии
+var footerInfo = document.querySelector('.page-footer__info');
+var toggleInfoBlock = footerInfo.querySelector('.page-footer__toggle-wrapper');
+var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');
+var buttonInfo = toggleInfoBlock.querySelector('.page-footer__toggle');
+var buttonOpenInfo = buttonInfo.querySelector('.page-footer__icon--open');
+var buttonCloseInfo = buttonInfo.querySelector('.page-footer__icon--close');
+
+var footerContacts = document.querySelector('.page-footer__contacts');
+var toggleContactsBlock = footerContacts.querySelector('.page-footer__toggle-wrapper');
+var listContacts = footerContacts.querySelector('.page-footer__list-contacts--open');
+var buttonContacts = toggleContactsBlock.querySelector('.page-footer__toggle');
+var buttonOpenContacts = buttonContacts.querySelector('.page-footer__icon--open');
+var buttonCloseContacts = buttonContacts.querySelector('.page-footer__icon--close');
+
+toggleInfoBlock.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  if (listInfo.classList.contains('page-footer__info-lists--close')) {
+    listInfo.classList.toggle('page-footer__info-lists--close');
+    listContacts.classList.remove('page-footer__list-contacts--open');
+    listContacts.classList.add('page-footer__list-contacts--close');
+
+    buttonOpenInfo.style.display = 'none';
+    buttonCloseInfo.style.display = 'block';
+  } else if ('page-footer__info-lists--open') {
+    listInfo.classList.toggle('page-footer__info-lists--close');
+    listContacts.classList.remove('page-footer__list-contacts--close');
+    listContacts.classList.add('page-footer__list-contacts--open');
+
+    buttonOpenInfo.style.display = 'block';
+    buttonCloseInfo.style.display = 'none';
+  }
+});
+
+toggleContactsBlock.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (listContacts.classList.contains('page-footer__list-contacts--open')) {
+    listContacts.classList.remove('page-footer__list-contacts--open');
+    listContacts.classList.add('page-footer__list-contacts--close');
+    listInfo.classList.remove('page-footer__info-lists--close');
+    listInfo.classList.add('page-footer__info-lists--open');
+
+    buttonCloseContacts.style.display = 'none';
+    buttonOpenContacts.style.display = 'block';
+  } else if ('page-footer__list-contacts--close') {
+    listContacts.classList.remove('page-footer__list-contacts--close');
+    listContacts.classList.add('page-footer__list-contacts--open');
+    listInfo.classList.remove('page-footer__info-lists--open');
+    listInfo.classList.add('page-footer__info-lists--close');
+
+    buttonCloseContacts.style.display = 'block';
+    buttonOpenContacts.style.display = 'none';
+  }
+});
+
+// Маска номера телефона
+// var phoneMask = IMask(
+//   document.querySelectorAll('input[type=tel]'), {
+//     mask: '+{7}(000)000-00-00'
+//   })
+
+var element = document.querySelectorAll('input[type=tel]');
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+var mask = IMask(element, maskOptions);
+
+
+
+
+// var phoneMask = function () {
+//   var telInputs = Array.prototype.slice.call(document.querySelectorAll('input[type=tel]'));
+//   var maskOptions = {
+//     mask: '+{7}(000)000-00-00'
+//   };
+//
+//   telInputs.forEach(function (it) {
+//     if (it) {
+//       var mask = IMask(it, maskOptions);
+//     }
+//   });
+// }
+
+// (function () {
+//   var telInputs = Array.prototype.slice.call(document.querySelectorAll('input[type=tel]'));
+//   var maskOptions = {
+//     mask: '+{7}(000)000-00-00'
+//   };
+//
+//
+//   telInputs.forEach(function (it) {
+//     if (it) {
+//       var mask = IMask(it, maskOptions);
+//     }
+//   });
+// })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var footerInfo = document.querySelector('.page-footer__info');
+// if (footerInfo) {
+//   var toggleInfoBlock = footerInfo.querySelector('.page-footer__toggle-wrapper');
+//   var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');
+// }
+//
+// var footerContact = document.querySelector('.page-footer__contacts');
+// if (footerContact) {
+//   var toggleContactBlock = footerContact.querySelector('.page-footer__toggle-wrapper');
+// }
+//
+// var classRemove = function (el, name) {
+//   if (el.classList.contains(name)) {
+//     el.classList.remove(name);
+//   }
+// };
+//
+// var classToggle = function (el1, el2, name) {
+//   if (el1.classList.contains(name)) {
+//     el1.classList.remove(name);
+//     if (el2 && !el2.classList.contains(name)) {
+//       el2.classList.add(name);
+//     }
+//   } else {
+//     el1.classList.add(name);
+//   }
+// };
+//
+// if (toggleInfoBlock) {
+//   classRemove(listInfo, 'page-footer__info-lists--close');
+//
+//   toggleInfoBlock.addEventListener('click', function (evt) {
+//     evt.preventDefault();
+//     classToggle(footerInfo, footerContact, 'page-footer__info-lists--close');
+//   });
+// }
+
+// if (toggleInfoBlock) {
+//   classRemove(listInfo, 'page-footer__info-lists--close');
+//
+//   toggleInfoBlock.addEventListener('click', function (evt) {
+//     evt.preventDefault();
+//     classToggle(footerInfo, footerContact, 'page-footer__accordion--close');
+//   });
+// }
+
+// if (toggleContactBlock) {
+//   classRemove(footerContact, 'footer__info_nojs');
+//
+//   toggleContactBlock.addEventListener('click', function (evt) {
+//     evt.preventDefault();
+//     classToggle(footerContact, footerInfo, 'page-footer__accordion--close');
+//   });
+// }
+
+
+// var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');
+// undefined
+// if (footerInfo) {
+//   classRemove(listInfo, 'page-footer__info-lists--close');
+// }
