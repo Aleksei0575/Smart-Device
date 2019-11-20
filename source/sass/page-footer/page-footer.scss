@@ -336,10 +336,12 @@
       display: none;
     }
 
-    .page-footer__info-lists {
-      &--close {
-        display: none;
-      }
+    .page-footer__lists {
+      display: none;
+
+      //&--close {
+      // display: none;
+      //}
 
       &--open {
         display: block;
@@ -401,15 +403,15 @@
       display: block;
     }
 
-    .page-footer__list-contacts {
-      &--close {
-        display: none;
-      }
-
-      &--open {
-        display: block;
-      }
-    }
+    //.page-footer__list-contacts {
+    //  &--close {
+    //    display: none;
+    //  }
+    //
+    //  &--open {
+    //    display: block;
+    //  }
+    //}
 
     .page-footer__toggle {
       display: flex;
