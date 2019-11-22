@@ -117,8 +117,6 @@ buttonPromo.addEventListener('click', function (evt) {
 });
 
 // Аккордеон для мобильной версии
-var footerInfo = document.querySelector('.page-footer__info');
-
 
 // var accordion = (function (element) {
 //   debugger;
@@ -132,9 +130,9 @@ var footerInfo = document.querySelector('.page-footer__info');
 //     return element;
 //   };
 //   return function () {
-//     var mainElement = {}, // .accordion
-//       items = {}, // .accordion-item
-//       contents = {}; // .accordion-item-content
+//     var mainElement = {},
+//       items = {},
+//       contents = {};
 //
 //     var actionClick = function (evt) {
 //         if (!evt.target.classList.contains('page-footer__toggle-wrapper')) { // прекращаем выполнение функции если кликнули не по заголовку
@@ -165,8 +163,10 @@ var footerInfo = document.querySelector('.page-footer__info');
 //
 //     return {
 //       init: function (element) {
-//         mainElement = (typeof element === 'string' ? document.querySelectorAll(element) : element);
-//         items = mainElement.querySelectorAll('.page-footer__toggle-wrapper');
+//         // mainElement = (typeof element === 'string' ? document.querySelectorAll(element) : element);
+//         mainElement = document.querySelectorAll('..page-footer__toggle-wrapper');
+//         // items = mainElement.querySelectorAll('.page-footer__toggle-wrapper');
+//         items = document.querySelectorAll('.page-footer__lists');
 //         setupListeners();
 //       }
 //     }
@@ -211,33 +211,51 @@ var footerInfo = document.querySelector('.page-footer__info');
 // });
 
 
+// var panelItem = document.querySelectorAll('.page-footer__toggle-wrapper'),
+//   bodyItem = document.querySelectorAll('.page-footer__lists');
+// panelItem.__proto__.forEach = [].__proto__.forEach;
+//
+// var activePanel;
+// panelItem.forEach(function(item, i, panelItem) {
+//   item.addEventListener('click', function(evt) {
+//     debugger;
+//     //show new thingy;
+//     this.classList.toggle('page-footer__lists--open');
+//     this.nextElementSibling.classList.toggle('page-footer__lists--open');
+//     //hide old thingy
+//     if (activePanel) {
+//       activePanel.classList.toggle('page-footer__lists--open');
+//       activePanel.nextElementSibling.classList.toggle('page-footer__lists--open');
+//     }
+//     //update thingy
+//     activePanel = (activePanel === this) ? 0 : this;
+//   });
+// });
 
-var panelItem = document.querySelectorAll('.page-footer__toggle-wrapper'),
-  bodyItem = document.querySelectorAll('.page-footer__lists');
-panelItem.__proto__.forEach = [].__proto__.forEach;
 
-var activePanel;
-panelItem.forEach(function(item, i, panelItem) {
-  item.addEventListener('click', function(evt) {
-    debugger;
-    //show new thingy;
+
+
+
+var acc = document.querySelectorAll('.page-footer__toggle-wrapper');
+var i;
+var panel = document.querySelectorAll('.page-footer__lists');
+
+for (i = 0; i < acc.length; i++) {
+  debugger;
+  acc[i].addEventListener('click', function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
     this.classList.toggle('page-footer__lists--open');
-    this.nextElementSibling.classList.toggle('page-footer__lists--open');
-    //hide old thingy
-    if (activePanel) {
-      activePanel.classList.toggle('page-footer__lists--open');
-      activePanel.nextElementSibling.classList.toggle('page-footer__lists--open');
+
+    /* Toggle between hiding and showing the active panel */
+    panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
     }
-    //update thingy
-    activePanel = (activePanel === this) ? 0 : this;
   });
-});
-
-
-
-
-
-
+}
 
 
 
