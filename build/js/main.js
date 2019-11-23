@@ -118,9 +118,10 @@ buttonPromo.addEventListener('click', function (evt) {
 
 // Аккордеон для мобильной версии
 
+// Нашел в сети этот код с кучей функций, но это все не заработало
 // var accordion = (function (element) {
 //   debugger;
-//   var getItem = function (elements, className) { // функция для получения элемента с указанным классом
+//   var getItem = function (elements, className) {
 //     var element = undefined;
 //     elements.forEach(function (item) {
 //       if (item.classList.contains(className)) {
@@ -135,7 +136,7 @@ buttonPromo.addEventListener('click', function (evt) {
 //       contents = {};
 //
 //     var actionClick = function (evt) {
-//         if (!evt.target.classList.contains('page-footer__toggle-wrapper')) { // прекращаем выполнение функции если кликнули не по заголовку
+//         if (!evt.target.classList.contains('page-footer__toggle-wrapper')) {
 //           return;
 //         }
 //         evt.preventDefault(); // отменям стандартное действие
@@ -143,21 +144,18 @@ buttonPromo.addEventListener('click', function (evt) {
 //         var blockButtons = evt.target,
 //           item = blockButtons.parentElement,
 //           itemActive = getItem(items, 'page-footer__lists--open');
-//         if (itemActive === undefined) { // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+//         if (itemActive === undefined) {
 //           item.classList.add('page-footer__lists--open');
 //         } else {
-//           // удаляем класс show у ткущего элемента
 //           itemActive.classList.remove('page-footer__lists--open');
 //           // если следующая вкладка не равна активной
 //           if (itemActive !== item) {
-//             // добавляем класс show к элементу (в зависимости от выбранного заголовка)
 //             item.classList.add('page-footer__lists--open');
 //           }
 //         }
 //       },
 //
 //       setupListeners = function () {
-//         // добавим к элементу аккордиона обработчик события click
 //         mainElement.addEventListener('click', actionClick);
 //       };
 //
@@ -173,44 +171,9 @@ buttonPromo.addEventListener('click', function (evt) {
 //   }
 // })();
 
+//=====================================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var panelItem = document.querySelectorAll('.page-footer__toggle-wrapper'),
-//   active = document.getElementsByClassName('page-footer__lists--open');
-//
-// Array.from(panelItem).forEach(function(item, i, panelItem) {
-//   debugger;
-//   item.addEventListener('click', function(e) {
-//     if (active.length > 0 && active[0] !== this) // если есть активный элемент, и это не тот по которому кликнули
-//       active[0].classList.remove('page-footer__lists--open'); // убрать класс active
-//
-//     // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
-//     this.classList.toggle('page-footer__lists--open');
-//   });
-// });
-
-
+// Нашел в сети, попытался переделать под свою вестку. Один блок открывает, второй нет
 // var panelItem = document.querySelectorAll('.page-footer__toggle-wrapper'),
 //   bodyItem = document.querySelectorAll('.page-footer__lists');
 // panelItem.__proto__.forEach = [].__proto__.forEach;
@@ -232,13 +195,15 @@ buttonPromo.addEventListener('click', function (evt) {
 //   });
 // });
 
+//========================================================================================
 
-
-
-
+// С примера который ты мне скинул изначально - работает но не совсем так как нужно
 var acc = document.querySelectorAll('.page-footer__toggle-wrapper');
 var i;
 var panel = document.querySelectorAll('.page-footer__lists');
+var buttonBlock = document.querySelectorAll('.page-footer__toggle');
+var buttonOpen = document.querySelector('.page-footer__icon--open');
+var buttonClose = document.querySelector('.page-footer__icon--close');
 
 for (i = 0; i < acc.length; i++) {
   debugger;
@@ -246,6 +211,16 @@ for (i = 0; i < acc.length; i++) {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle('page-footer__lists--open');
+
+    if (buttonBlock[i]) {
+      if (this.classList.contains('page-footer__lists--open')) {
+        buttonOpen.style.display = 'none';
+        buttonClose.style.display = 'block';
+      } else {
+        buttonOpen.style.display = 'block';
+        buttonClose.style.display = 'none';
+      }
+    };
 
     /* Toggle between hiding and showing the active panel */
     panel = this.nextElementSibling;
@@ -257,16 +232,9 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+//======================================================================================
 
-
-
-
-
-
-
-
-
-
+// МОЙ СТАРЫЙ КОД - СТРАШНО НА НЕГО СМОТРЕТЬ((
 // var footerInfo = document.querySelector('.page-footer__info');
 // var toggleInfoBlock = footerInfo.querySelector('.page-footer__toggle-wrapper');
 // var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');

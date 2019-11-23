@@ -201,6 +201,9 @@ buttonPromo.addEventListener('click', function (evt) {
 var acc = document.querySelectorAll('.page-footer__toggle-wrapper');
 var i;
 var panel = document.querySelectorAll('.page-footer__lists');
+var buttonBlock = document.querySelectorAll('.page-footer__toggle');
+var buttonOpen = document.querySelector('.page-footer__icon--open');
+var buttonClose = document.querySelector('.page-footer__icon--close');
 
 for (i = 0; i < acc.length; i++) {
   debugger;
@@ -208,6 +211,13 @@ for (i = 0; i < acc.length; i++) {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle('page-footer__lists--open');
+    if (this.classList.contains('page-footer__lists--open')) {
+      buttonOpen.style.display = 'none';
+      buttonClose.style.display = 'block';
+    } else {
+      buttonOpen.style.display = 'block';
+      buttonClose.style.display = 'none';
+    }
 
     /* Toggle between hiding and showing the active panel */
     panel = this.nextElementSibling;
