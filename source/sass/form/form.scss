@@ -148,6 +148,14 @@
       opacity: 0.6;
     }
   }
+
+  span {
+    @include pseudo-elem;
+    bottom: 160px;
+    right: 440px;
+    background-color: white;
+    color: #000000;
+  }
 }
 
 .form__consent input[type="checkbox"]:checked ~ label::after {
@@ -446,6 +454,14 @@
       padding-top: 2px;
       padding-left: 23px;
     }
+
+    span {
+      @include pseudo-elem;
+      bottom: 60px;
+      right: 170px;
+      background-color: white;
+      color: #000000;
+    }
   }
 
   .form {
@@ -529,6 +545,16 @@
         top: 34px;
         left: 6px;
       }
+    }
+
+    span {
+      @include pseudo-elem;
+      @include font(14, 16);
+      width: 150px;
+      bottom: 55px;
+      left: 50px;
+      background-color: white;
+      color: #000000;
     }
   }
 }

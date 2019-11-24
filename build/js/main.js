@@ -117,177 +117,15 @@ buttonPromo.addEventListener('click', function (evt) {
 });
 
 // Аккордеон для мобильной версии
+const accordionButtons = document.querySelectorAll('.page-footer__toggle');
 
-// Нашел в сети этот код с кучей функций, но это все не заработало
-// var accordion = (function (element) {
-//   debugger;
-//   var getItem = function (elements, className) {
-//     var element = undefined;
-//     elements.forEach(function (item) {
-//       if (item.classList.contains(className)) {
-//         element = item;
-//       }
-//     });
-//     return element;
-//   };
-//   return function () {
-//     var mainElement = {},
-//       items = {},
-//       contents = {};
-//
-//     var actionClick = function (evt) {
-//         if (!evt.target.classList.contains('page-footer__toggle-wrapper')) {
-//           return;
-//         }
-//         evt.preventDefault(); // отменям стандартное действие
-//         // получаем необходимые данные
-//         var blockButtons = evt.target,
-//           item = blockButtons.parentElement,
-//           itemActive = getItem(items, 'page-footer__lists--open');
-//         if (itemActive === undefined) {
-//           item.classList.add('page-footer__lists--open');
-//         } else {
-//           itemActive.classList.remove('page-footer__lists--open');
-//           // если следующая вкладка не равна активной
-//           if (itemActive !== item) {
-//             item.classList.add('page-footer__lists--open');
-//           }
-//         }
-//       },
-//
-//       setupListeners = function () {
-//         mainElement.addEventListener('click', actionClick);
-//       };
-//
-//     return {
-//       init: function (element) {
-//         // mainElement = (typeof element === 'string' ? document.querySelectorAll(element) : element);
-//         mainElement = document.querySelectorAll('..page-footer__toggle-wrapper');
-//         // items = mainElement.querySelectorAll('.page-footer__toggle-wrapper');
-//         items = document.querySelectorAll('.page-footer__lists');
-//         setupListeners();
-//       }
-//     }
-//   }
-// })();
+accordionButtons.forEach(elem => {
+  elem.addEventListener('click', evt => {
+    const parentAccordion = evt.target.closest('.page-footer__accordion');
 
-//=====================================================================================
-
-// Нашел в сети, попытался переделать под свою вестку. Один блок открывает, второй нет
-// var panelItem = document.querySelectorAll('.page-footer__toggle-wrapper'),
-//   bodyItem = document.querySelectorAll('.page-footer__lists');
-// panelItem.__proto__.forEach = [].__proto__.forEach;
-//
-// var activePanel;
-// panelItem.forEach(function(item, i, panelItem) {
-//   item.addEventListener('click', function(evt) {
-//     debugger;
-//     //show new thingy;
-//     this.classList.toggle('page-footer__lists--open');
-//     this.nextElementSibling.classList.toggle('page-footer__lists--open');
-//     //hide old thingy
-//     if (activePanel) {
-//       activePanel.classList.toggle('page-footer__lists--open');
-//       activePanel.nextElementSibling.classList.toggle('page-footer__lists--open');
-//     }
-//     //update thingy
-//     activePanel = (activePanel === this) ? 0 : this;
-//   });
-// });
-
-//========================================================================================
-
-// С примера который ты мне скинул изначально - работает но не совсем так как нужно
-var acc = document.querySelectorAll('.page-footer__toggle-wrapper');
-var i;
-var panel = document.querySelectorAll('.page-footer__lists');
-var buttonBlock = document.querySelectorAll('.page-footer__toggle');
-var buttonOpen = document.querySelector('.page-footer__icon--open');
-var buttonClose = document.querySelector('.page-footer__icon--close');
-
-for (i = 0; i < acc.length; i++) {
-  debugger;
-  acc[i].addEventListener('click', function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle('page-footer__lists--open');
-
-    if (buttonBlock[i]) {
-      if (this.classList.contains('page-footer__lists--open')) {
-        buttonOpen.style.display = 'none';
-        buttonClose.style.display = 'block';
-      } else {
-        buttonOpen.style.display = 'block';
-        buttonClose.style.display = 'none';
-      }
-    };
-
-    /* Toggle between hiding and showing the active panel */
-    panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-
-//======================================================================================
-
-// МОЙ СТАРЫЙ КОД - СТРАШНО НА НЕГО СМОТРЕТЬ((
-// var footerInfo = document.querySelector('.page-footer__info');
-// var toggleInfoBlock = footerInfo.querySelector('.page-footer__toggle-wrapper');
-// var listInfo = footerInfo.querySelector('.page-footer__info-lists--close');
-// var buttonInfo = toggleInfoBlock.querySelector('.page-footer__toggle');
-// var buttonOpenInfo = buttonInfo.querySelector('.page-footer__icon--open');
-// var buttonCloseInfo = buttonInfo.querySelector('.page-footer__icon--close');
-//
-// var footerContacts = document.querySelector('.page-footer__contacts');
-// var toggleContactsBlock = footerContacts.querySelector('.page-footer__toggle-wrapper');
-// var listContacts = footerContacts.querySelector('.page-footer__list-contacts--open');
-// var buttonContacts = toggleContactsBlock.querySelector('.page-footer__toggle');
-// var buttonOpenContacts = buttonContacts.querySelector('.page-footer__icon--open');
-// var buttonCloseContacts = buttonContacts.querySelector('.page-footer__icon--close');
-//
-// toggleInfoBlock.addEventListener('click', function(evt) {
-//   evt.preventDefault();
-//   if (listInfo.classList.contains('page-footer__info-lists--close')) {
-//     listInfo.classList.toggle('page-footer__info-lists--close');
-//     listContacts.classList.remove('page-footer__list-contacts--open');
-//     listContacts.classList.add('page-footer__list-contacts--close');
-//
-//     buttonOpenInfo.style.display = 'none';
-//     buttonCloseInfo.style.display = 'block';
-//   } else if ('page-footer__info-lists--open') {
-//     listInfo.classList.toggle('page-footer__info-lists--close');
-//     listContacts.classList.remove('page-footer__list-contacts--close');
-//     listContacts.classList.add('page-footer__list-contacts--open');
-//
-//     buttonOpenInfo.style.display = 'block';
-//     buttonCloseInfo.style.display = 'none';
-//   }
-// });
-//
-// toggleContactsBlock.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   if (listContacts.classList.contains('page-footer__list-contacts--open')) {
-//     listContacts.classList.remove('page-footer__list-contacts--open');
-//     listContacts.classList.add('page-footer__list-contacts--close');
-//     listInfo.classList.remove('page-footer__info-lists--close');
-//     listInfo.classList.add('page-footer__info-lists--open');
-//
-//     buttonCloseContacts.style.display = 'none';
-//     buttonOpenContacts.style.display = 'block';
-//   } else if ('page-footer__list-contacts--close') {
-//     listContacts.classList.remove('page-footer__list-contacts--close');
-//     listContacts.classList.add('page-footer__list-contacts--open');
-//     listInfo.classList.remove('page-footer__info-lists--open');
-//     listInfo.classList.add('page-footer__info-lists--close');
-//
-//     buttonCloseContacts.style.display = 'block';
-//     buttonOpenContacts.style.display = 'none';
-//   }
-// });
+    parentAccordion.classList.toggle('page-footer__accordion--open');
+  })
+})
 
 // Маска номера телефона
 var phoneMask = function () {
@@ -305,3 +143,20 @@ var phoneMask = function () {
 
 phoneMask();
 
+// ================================================================================
+var tooltip = function () {
+  // var elemCheckbox = document.getElementById('consent');
+  var txt = "";
+  if (document.getElementById('consent').validity.valueMissing) {
+    txt = "Установите флажок";
+  }
+  document.getElementById('tooltip').innerHTML = txt;
+}
+tooltip();
+
+// function myFunction() {
+//   var inpObj = document.getElementById("id1");
+//   if (!inpObj.checkValidity()) {
+//     document.getElementById("demo").innerHTML = inpObj.validationMessage;
+//   }
+// }
