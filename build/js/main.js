@@ -144,15 +144,15 @@ var phoneMask = function () {
 phoneMask();
 
 // ================================================================================
-var tooltip = function () {
-  // var elemCheckbox = document.getElementById('consent');
-  var txt = "";
-  if (document.getElementById('consent').validity.valueMissing) {
-    txt = "Установите флажок";
+function tooltip() {
+  var elemCheckbox = document.getElementById('consent');
+  var txt = '';
+  if (elemCheckbox.validity.valueMissing) {
+    txt = 'Установите флажок';
   }
   document.getElementById('tooltip').innerHTML = txt;
 }
-tooltip();
+
 
 // function myFunction() {
 //   var inpObj = document.getElementById("id1");

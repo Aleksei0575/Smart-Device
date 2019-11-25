@@ -143,7 +143,7 @@ var phoneMask = function () {
 
 phoneMask();
 
-// ================================================================================
+// Вывод текста-подсказки возле чекбокса
 function tooltip() {
   var elemCheckbox = document.getElementById('consent');
   var txt = '';
@@ -152,11 +152,3 @@ function tooltip() {
   }
   document.getElementById('tooltip').innerHTML = txt;
 }
-
-
-// function myFunction() {
-//   var inpObj = document.getElementById("id1");
-//   if (!inpObj.checkValidity()) {
-//     document.getElementById("demo").innerHTML = inpObj.validationMessage;
-//   }
-// }
